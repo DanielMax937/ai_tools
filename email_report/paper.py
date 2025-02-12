@@ -6,6 +6,7 @@ import arxiv
 from llama_index.core.agent import FunctionCallingAgentWorker
 from llama_index.core.llms import ChatMessage
 from llama_index.llms.gemini import Gemini
+from llama_index.llms.azure_openai import AzureOpenAI
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -76,9 +77,11 @@ tools = [
         description="Get detailed information about a specific arXiv paper using its ID"
     )
 ]
-print("api key is", os.getenv('GOOGLE_API_KEY'))
-function_calling_llm = Gemini(model="models/gemini-2.0-flash-exp", api_key=os.getenv('GOOGLE_API_KEY'))
-
+# function_calling_llm = Gemini(model="models/gemini-2.0-flash-exp", api_key=os.getenv('GOOGLE_API_KEY'))
+# function_calling_llm = OpenAI(model="ep-20241222103914-fgbcp", api_key='8474f5ae-6e12-40d1-8e06-d453d9797fc3', api_base='https://ark.cn-beijing.volces.com/api/v3')
+function_calling_llm = AzureOpenAI(
+    engine="gpt-4o", model="gpt-4o", temperature=0.0
+)
 # Setup chatbot-style prefix messages
 def create_prefix_message():
     return [
