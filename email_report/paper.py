@@ -109,34 +109,41 @@ agent = FunctionCallingAgentWorker(
     verbose=True,
 ).as_agent()
 
-def send_email(content: str):
+def send_email(content: str, is_html: bool = True):
+    """
+    Send email using 126 mail SMTP server
+    
+    Args:
+        content (str): The email content to send
+        is_html (bool): Whether the content is HTML format
+    """
     try:
         # Email configuration
-        sender = os.getenv('EMAIL_SENDER')  # Your 126 email address
-        password = os.getenv('EMAIL_PASSWORD')  # Your 126 email password or authorization code
-        receiver = os.getenv('EMAIL_RECEIVER') # Recipient email address
+        sender = os.getenv('EMAIL_SENDER')
+        password = os.getenv('EMAIL_PASSWORD')
+        receiver = os.getenv('EMAIL_RECEIVER')
         smtp_server = "smtp.126.com"
-        smtp_port = 465  # SSL port
+        smtp_port = 465
 
         if not all([sender, password, receiver]):
             print("Error: Missing email configuration. Please check your .env file.")
             return
 
         # Create message
-        message = MIMEMultipart()
+        message = MIMEMultipart('alternative')
         message['From'] = Header(sender)
         message['To'] = Header(receiver)
-        message['Subject'] = Header('ArXiv Research Summary', 'utf-8')
+        message['Subject'] = Header('ArXiv 研究论文摘要', 'utf-8')
 
-        # Add content
-        message.attach(MIMEText(content, 'plain', 'utf-8'))
+        # Add content with proper MIME type
+        if is_html:
+            message.attach(MIMEText(content, 'html', 'utf-8'))
+        else:
+            message.attach(MIMEText(content, 'plain', 'utf-8'))
 
         # Create SMTP SSL connection
         with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
-            # Login
             server.login(sender, password)
-            
-            # Send email
             server.sendmail(sender, receiver, message.as_string())
             
         print("Email sent successfully!")
@@ -148,7 +155,6 @@ def send_email(content: str):
 def chatbot():
     print("🤖: Hi! I can help you research academic papers from arXiv based on your interests. Let's start!")
     
-    # human_input = input("What topic would you like to research? ")
     search_keyword = "AI"
     # Create initial search prompt
     search_prompt = (
@@ -164,11 +170,91 @@ def chatbot():
     )
     
     # Get research results and summary
-    res = agent.chat(search_prompt)
-    print("\n🤖: Research complete!\n")
-    send_email(res.response)
+    research_result = agent.chat(search_prompt)
+    
+    # Create formatting and translation prompt
+    format_prompt = (
+        "Please format and translate the following research summary email to Chinese. Follow these rules:\n"
+        "1. Remove any email headers, greetings, or signatures\n"
+        "2. Keep only the main content of the research summary\n"
+        "3. Translate all content to Chinese while maintaining the academic accuracy\n"
+        "4. Keep the original paper titles in English but add Chinese translations in parentheses\n"
+        "5. Format the text with clear sections and bullet points for readability\n"
+        "6. Keep all technical terms in both English and Chinese for clarity\n\n"
+        f"Here's the content to format and translate:\n{research_result.response}"
+    )
+    
+    # Get formatted and translated content
+    formatted_result = agent.chat(format_prompt)
+    
+    # Create HTML formatting prompt
+    html_prompt = (
+        "Please format the following Chinese research summary into beautiful HTML format. Follow these rules:\n"
+        "1. Use proper HTML structure with CSS styling\n"
+        "2. Create a responsive design that looks good on both desktop and mobile\n"
+        "3. Use appropriate colors, fonts, and spacing\n"
+        "4. Format different sections with clear visual hierarchy\n"
+        "5. Make paper titles stand out\n"
+        "6. Use bullet points for lists\n"
+        "7. Add subtle borders and background colors to separate sections\n"
+        "8. Include a table of contents at the top\n"
+        "Here's the CSS template to use:\n"
+        '''
+        <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .toc {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .paper-title {
+            color: #2c5282;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .paper-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background-color: #f0f7ff;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        </style>
+        '''
+        f"\nHere's the content to format:\n{formatted_result.response}"
+    )
+    
+    # Get HTML formatted content
+    html_result = agent.chat(html_prompt)
+    
+    print("\n🤖: Research complete, translated, and formatted!\n")
+    send_email(html_result.response, is_html=True)
 
 
 if __name__ == "__main__":
     chatbot()
-    # send_email("Hello, this is a test email.")
