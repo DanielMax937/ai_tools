@@ -607,7 +607,7 @@ if __name__ == "__main__":
         print("\nThis is a relevant ASK HN post!")
         print(f"AI Analysis: {story['ai_analysis']}")
         print("\nAnalyzing comments and sending email report...")
-        send_idea_summary_email(story['id'], comment_limit=10)
+        send_idea_summary_email(story['id'], comment_limit=1500)
         
         # Record this news as processed
         save_processed_news(story['id'])
