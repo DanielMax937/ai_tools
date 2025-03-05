@@ -189,6 +189,127 @@ def send_email(content: str, is_html: bool = True):
     except Exception as e:
         print(f"Error sending email: {str(e)}")
 
+def fetch_url_list_from_url(url: str, persona: str) -> Dict:
+    """
+    从 API 获取 URL 的子链接列表
+    
+    Args:
+        url (str): 目标 URL
+        
+    Returns:
+        Dict: API 返回的数据，包含文章链接和选择器信息
+    """
+    try:
+        response = requests.post(
+            'http://127.0.0.1:8000/kl/website/analyze',
+            json={"url": url, "persona": persona},
+            timeout=30
+        )
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        print(f"Error fetching sub-URLs for {url}: {str(e)}")
+        return {"success": False, "error": str(e)}
+
+def process_recommendations(data: Dict) -> Dict:
+    """
+    处理推荐数据，包括验证、排序和增强推荐内容
+    
+    Args:
+        data (Dict): API 返回的原始数据
+        
+    Returns:
+        Dict: 处理后的推荐数据
+    """
+    if not data.get("success"):
+        return {"urls": [], "tags": []}
+    
+    recommendations = data.get("data", {})
+    urls = recommendations.get("urls", [])
+    tags = recommendations.get("tags", [])
+    
+    # 验证 URL 有效性并获取子链接
+    valid_urls = []
+    persona = data.get("data", {}).get("persona", "")
+    print("\n验证推荐网站...")
+    for url in urls:
+        try:
+            # 简单的 HEAD 请求验证 URL 是否可访问
+            response = requests.head(url, timeout=5)
+            if response.status_code < 400:  # 2xx 或 3xx 状态码
+                # 获取子链接
+                sub_urls_data = fetch_url_list_from_url(url, persona)
+                valid_urls.append({
+                    "url": url,
+                    "status": "有效",
+                    "status_code": response.status_code,
+                    "sub_urls": sub_urls_data.get("data", {}).get("article_links", []) if sub_urls_data.get("success") else []
+                })
+                print(f"✅ {url} - 状态码: {response.status_code}")
+            else:
+                valid_urls.append({
+                    "url": url,
+                    "status": "无效",
+                    "status_code": response.status_code
+                })
+                print(f"❌ {url} - 状态码: {response.status_code}")
+        except Exception as e:
+            valid_urls.append({
+                "url": url,
+                "status": "错误",
+                "error": str(e)
+            })
+            print(f"❌ {url} - 错误: {str(e)}")
+    
+    # 按标签数量排序
+    sorted_tags = sorted(tags, key=lambda x: x.get("count", 0), reverse=True)
+    
+    # 分类标签
+    tag_categories = {
+        "高频标签": [tag for tag in sorted_tags if tag.get("count", 0) >= 5],
+        "中频标签": [tag for tag in sorted_tags if 2 <= tag.get("count", 0) < 5],
+        "低频标签": [tag for tag in sorted_tags if tag.get("count", 0) < 2]
+    }
+    
+    return {
+        "urls": valid_urls,
+        "tags": sorted_tags,
+        "tag_categories": tag_categories
+    }
+
+def display_recommendations(processed_data: Dict):
+    """
+    显示处理后的推荐数据
+    
+    Args:
+        processed_data (Dict): 处理后的推荐数据
+    """
+    print("\n推荐网站列表:")
+    print("-" * 50)
+    for i, url_data in enumerate(processed_data.get("urls", []), 1):
+        status_icon = "✅" if url_data.get("status") == "有效" else "❌"
+        status_info = f"状态码: {url_data.get('status_code')}" if "status_code" in url_data else f"错误: {url_data.get('error', '未知错误')}"
+        print(f"{i}. {status_icon} {url_data.get('url')} - {status_info}")
+        # 显示子链接
+        if url_data.get("sub_urls"):
+            print(f"   子链接 ({len(url_data['sub_urls'])}个):")
+            for j, sub_url in enumerate(url_data["sub_urls"][:5], 1):  # 只显示前5个子链接
+                print(f"     {j}. {sub_url}")
+            if len(url_data["sub_urls"]) > 5:
+                print(f"     ... 还有 {len(url_data['sub_urls']) - 5} 个链接")
+        print()  # 添加空行分隔不同网站
+    print("-" * 50)
+    
+    # 显示标签分类
+    print("\n标签分类:")
+    print("-" * 50)
+    for category, tags in processed_data.get("tag_categories", {}).items():
+        if tags:
+            print(f"\n{category} ({len(tags)}个):")
+            for tag in tags:
+                print(f"  • {tag.get('name')} ({tag.get('count')})")
+    print("-" * 50)
+
 def main():
     """主函数"""
     print("Fetching user persona and recommendations...")
@@ -199,11 +320,17 @@ def main():
     if data.get("success"):
         print("Data fetched successfully!")
         
+        # 处理推荐数据
+        processed_recommendations = process_recommendations(data)
+        
+        # 显示推荐数据
+        display_recommendations(processed_recommendations)
+        
         # 格式化为 HTML
         html_content = format_persona_html(data)
         
         # 发送邮件
-        print("Sending email report...")
+        print("\nSending email report...")
         send_email(html_content)
     else:
         print(f"Failed to fetch data: {data.get('error', 'Unknown error')}")
