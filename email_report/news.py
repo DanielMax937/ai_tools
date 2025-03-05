@@ -310,6 +310,108 @@ def display_recommendations(processed_data: Dict):
                 print(f"  • {tag.get('name')} ({tag.get('count')})")
     print("-" * 50)
 
+def format_recommendations_html(processed_data: Dict) -> str:
+    """
+    将推荐网站和子链接格式化为 HTML 内容
+    
+    Args:
+        processed_data (Dict): 处理后的推荐数据
+        
+    Returns:
+        str: 格式化后的 HTML 内容
+    """
+    # 构建推荐网站和子链接的 HTML
+    sites_html = ""
+    for i, url_data in enumerate(processed_data.get("urls", []), 1):
+        if url_data.get("status") != "有效" or not url_data.get("sub_urls"):
+            continue
+            
+        main_url = url_data.get("url")
+        sub_urls = url_data.get("sub_urls", [])
+        
+        # 构建子链接 HTML
+        sub_urls_html = ""
+        for sub_url in sub_urls:
+            sub_urls_html += f'<li><a href="{sub_url}" target="_blank">{sub_url}</a></li>\n'
+        
+        # 添加网站和子链接
+        sites_html += f"""
+        <div class="site">
+            <h3><a href="{main_url}" target="_blank">{main_url}</a></h3>
+            <ul class="sub-urls">
+                {sub_urls_html}
+            </ul>
+        </div>
+        """
+    
+    # 构建完整 HTML
+    html = f"""
+    <html>
+    <head>
+    <style>
+    .container {{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }}
+    .header {{
+        text-align: center;
+        margin-bottom: 30px;
+    }}
+    .site {{
+        margin-bottom: 40px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }}
+    .site h3 {{
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }}
+    .site h3 a {{
+        color: #2c5282;
+        text-decoration: none;
+    }}
+    .sub-urls {{
+        list-style-type: none;
+        padding: 0;
+    }}
+    .sub-urls li {{
+        margin-bottom: 8px;
+        padding-left: 15px;
+        border-left: 3px solid #e2e8f0;
+    }}
+    .sub-urls a {{
+        color: #4a5568;
+        text-decoration: none;
+        font-size: 0.95em;
+    }}
+    .sub-urls a:hover {{
+        text-decoration: underline;
+        color: #2c5282;
+    }}
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="header">
+            <h1>推荐网站及文章</h1>
+            <p>以下是根据您的兴趣推荐的网站及其最新文章</p>
+        </div>
+        
+        {sites_html}
+    </div>
+    </body>
+    </html>
+    """
+    
+    return html
+
 def main():
     """主函数"""
     print("Fetching user persona and recommendations...")
@@ -326,8 +428,8 @@ def main():
         # 显示推荐数据
         display_recommendations(processed_recommendations)
         
-        # 格式化为 HTML
-        html_content = format_persona_html(data)
+        # 格式化为 HTML（仅包含推荐网站和子链接）
+        html_content = format_recommendations_html(processed_recommendations)
         
         # 发送邮件
         print("\nSending email report...")
