@@ -6,8 +6,22 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
+from llama_index.llms.azure_openai import AzureOpenAI
+import asyncio
+from playwright.async_api import async_playwright
+import time
 
 load_dotenv()
+
+# 全局配置
+MAX_SUB_URLS = 3  # 每个主 URL 最多处理的子 URL 数量
+
+# Initialize AI model
+llm = AzureOpenAI(
+    engine="gpt-4o",
+    model="gpt-4o",
+    temperature=0.0
+)
 
 def fetch_persona_data() -> Dict:
     """
@@ -211,6 +225,165 @@ def fetch_url_list_from_url(url: str, persona: str) -> Dict:
         print(f"Error fetching sub-URLs for {url}: {str(e)}")
         return {"success": False, "error": str(e)}
 
+async def scrape_page_content(url: str) -> str:
+    """
+    使用 Playwright 抓取页面内容
+    
+    Args:
+        url (str): 目标 URL
+        
+    Returns:
+        str: 页面内容
+    """
+    try:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch(headless=True)
+            page = await browser.new_page()
+            await page.goto(url, timeout=30000)
+            
+            # 等待页面加载完成
+            await page.wait_for_load_state("networkidle")
+            
+            # 获取页面主要内容
+            # 尝试获取文章内容 - 这里的选择器需要根据目标网站调整
+            content = await page.evaluate("""
+                () => {
+                    // 尝试找到文章主体
+                    const articleSelectors = [
+                        'article', 
+                        '.article-content', 
+                        '.post-content',
+                        '.entry-content',
+                        'main',
+                        '#content'
+                    ];
+                    
+                    let content = '';
+                    
+                    // 尝试不同的选择器
+                    for (const selector of articleSelectors) {
+                        const element = document.querySelector(selector);
+                        if (element) {
+                            content = element.innerText;
+                            break;
+                        }
+                    }
+                    
+                    // 如果没有找到特定内容，获取 body 内容
+                    if (!content) {
+                        content = document.body.innerText;
+                    }
+                    
+                    // 清理内容
+                    return content
+                        .replace(/\\s+/g, ' ')
+                        .trim()
+                        .substring(0, 15000); // 限制长度
+                }
+            """)
+            
+            await browser.close()
+            return content
+    except Exception as e:
+        print(f"Error scraping {url}: {str(e)}")
+        return f"无法抓取内容: {str(e)}"
+
+def summarize_content(content: str, url: str) -> str:
+    """
+    使用 AI 总结页面内容
+    
+    Args:
+        content (str): 页面内容
+        url (str): 页面 URL
+        
+    Returns:
+        str: 内容摘要
+    """
+    try:
+        if not content or len(content) < 100:
+            return "无足够内容可供总结"
+        
+        prompt = f"""
+        请对以下网页内容进行简洁的总结，提取关键信息和主要观点。总结应该不超过 150 字。
+        
+        网页: {url}
+        
+        内容:
+        {content[:10000]}  # 限制输入长度
+        
+        总结:
+        """
+        
+        response = llm.complete(prompt)
+        summary = response.text.strip()
+        
+        return summary
+    except Exception as e:
+        print(f"Error summarizing content for {url}: {str(e)}")
+        return f"无法生成摘要: {str(e)}"
+
+async def process_sub_url(url: str) -> Dict:
+    """
+    处理子 URL：抓取内容并生成摘要
+    
+    Args:
+        url (str): 子 URL
+        
+    Returns:
+        Dict: 包含 URL 和摘要的字典
+    """
+    try:
+        print(f"处理子链接: {url}")
+        content = await scrape_page_content(url)
+        summary = summarize_content(content, url)
+        
+        return {
+            "url": url,
+            "summary": summary
+        }
+    except Exception as e:
+        print(f"Error processing sub URL {url}: {str(e)}")
+        return {
+            "url": url,
+            "summary": f"处理失败: {str(e)}"
+        }
+
+async def process_all_sub_urls(urls: List[str], max_concurrent: int = 3, max_urls: int = None) -> List[Dict]:
+    """
+    并发处理多个子 URL
+    
+    Args:
+        urls (List[str]): 子 URL 列表
+        max_concurrent (int): 最大并发数
+        max_urls (int): 最大处理 URL 数，如果为 None 则使用全局配置
+        
+    Returns:
+        List[Dict]: 处理结果列表
+    """
+    # 使用全局配置或传入的参数
+    if max_urls is None:
+        max_urls = MAX_SUB_URLS
+    
+    # 限制处理的 URL 数量
+    limited_urls = urls[:max_urls]
+    if len(urls) > max_urls:
+        print(f"⚠️ 限制处理 URL 数量为 {max_urls}（原始数量: {len(urls)}）")
+    
+    # 使用信号量限制并发数
+    semaphore = asyncio.Semaphore(max_concurrent)
+    
+    async def process_with_semaphore(url):
+        async with semaphore:
+            return await process_sub_url(url)
+    
+    # 创建任务
+    tasks = [process_with_semaphore(url) for url in limited_urls]
+    
+    # 等待所有任务完成
+    results = await asyncio.gather(*tasks)
+    
+    return results
+
 def process_recommendations(data: Dict) -> Dict:
     """
     处理推荐数据，包括验证、排序和增强推荐内容
@@ -277,6 +450,44 @@ def process_recommendations(data: Dict) -> Dict:
         "tag_categories": tag_categories
     }
 
+async def process_recommendations_with_summaries(processed_data: Dict) -> Dict:
+    """
+    为推荐数据添加内容摘要
+    
+    Args:
+        processed_data (Dict): 处理后的推荐数据
+        
+    Returns:
+        Dict: 添加了摘要的推荐数据
+    """
+    urls_with_summaries = []
+    
+    for url_data in processed_data.get("urls", []):
+        if url_data.get("status") != "有效" or not url_data.get("sub_urls"):
+            urls_with_summaries.append(url_data)
+            continue
+        
+        # 处理子链接
+        sub_urls = url_data.get("sub_urls", [])
+        total_sub_urls = len(sub_urls)
+        limited_sub_urls = min(total_sub_urls, MAX_SUB_URLS)
+        
+        print(f"\n处理 {url_data.get('url')} 的子链接 ({limited_sub_urls}/{total_sub_urls} 个)...")
+        
+        # 处理子链接，使用全局限制
+        sub_url_summaries = await process_all_sub_urls(sub_urls)
+        
+        # 更新 URL 数据
+        url_data_with_summaries = url_data.copy()
+        url_data_with_summaries["sub_url_summaries"] = sub_url_summaries
+        urls_with_summaries.append(url_data_with_summaries)
+    
+    # 更新处理后的数据
+    result = processed_data.copy()
+    result["urls"] = urls_with_summaries
+    
+    return result
+
 def display_recommendations(processed_data: Dict):
     """
     显示处理后的推荐数据
@@ -327,12 +538,22 @@ def format_recommendations_html(processed_data: Dict) -> str:
             continue
             
         main_url = url_data.get("url")
-        sub_urls = url_data.get("sub_urls", [])
+        sub_url_summaries = url_data.get("sub_url_summaries", [])
         
         # 构建子链接 HTML
         sub_urls_html = ""
-        for sub_url in sub_urls:
-            sub_urls_html += f'<li><a href="{sub_url}" target="_blank">{sub_url}</a></li>\n'
+        for sub_data in sub_url_summaries:
+            sub_url = sub_data.get("url")
+            summary = sub_data.get("summary", "无摘要")
+            
+            sub_urls_html += f"""
+            <li class="sub-url-item">
+                <a href="{sub_url}" target="_blank" class="sub-url-link">{sub_url}</a>
+                <div class="summary">
+                    <p>{summary}</p>
+                </div>
+            </li>
+            """
         
         # 添加网站和子链接
         sites_html += f"""
@@ -381,27 +602,38 @@ def format_recommendations_html(processed_data: Dict) -> str:
         list-style-type: none;
         padding: 0;
     }}
-    .sub-urls li {{
-        margin-bottom: 8px;
-        padding-left: 15px;
-        border-left: 3px solid #e2e8f0;
+    .sub-url-item {{
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 5px;
     }}
-    .sub-urls a {{
+    .sub-url-link {{
         color: #4a5568;
         text-decoration: none;
-        font-size: 0.95em;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
     }}
-    .sub-urls a:hover {{
+    .sub-url-link:hover {{
         text-decoration: underline;
         color: #2c5282;
+    }}
+    .summary {{
+        font-size: 0.95em;
+        color: #4a5568;
+        line-height: 1.5;
+        border-left: 3px solid #e2e8f0;
+        padding-left: 15px;
+        margin-top: 10px;
     }}
     </style>
     </head>
     <body>
     <div class="container">
         <div class="header">
-            <h1>推荐网站及文章</h1>
-            <p>以下是根据您的兴趣推荐的网站及其最新文章</p>
+            <h1>推荐网站及文章摘要</h1>
+            <p>以下是根据您的兴趣推荐的网站及其最新文章摘要</p>
         </div>
         
         {sites_html}
@@ -412,9 +644,9 @@ def format_recommendations_html(processed_data: Dict) -> str:
     
     return html
 
-def main():
-    """主函数"""
-    print("Fetching user persona and recommendations...")
+async def main_async():
+    """异步主函数"""
+    print(f"Fetching user persona and recommendations... (最大子 URL 数量: {MAX_SUB_URLS})")
     
     # 获取数据
     data = fetch_persona_data()
@@ -428,14 +660,22 @@ def main():
         # 显示推荐数据
         display_recommendations(processed_recommendations)
         
-        # 格式化为 HTML（仅包含推荐网站和子链接）
-        html_content = format_recommendations_html(processed_recommendations)
+        # 添加内容摘要
+        processed_recommendations_with_summaries = await process_recommendations_with_summaries(processed_recommendations)
+        
+        # 格式化为 HTML（包含推荐网站、子链接和摘要）
+        html_content = format_recommendations_html(processed_recommendations_with_summaries)
         
         # 发送邮件
         print("\nSending email report...")
         send_email(html_content)
     else:
         print(f"Failed to fetch data: {data.get('error', 'Unknown error')}")
+
+def main():
+    """主函数"""
+    # 运行异步主函数
+    asyncio.run(main_async())
 
 if __name__ == "__main__":
     main()
