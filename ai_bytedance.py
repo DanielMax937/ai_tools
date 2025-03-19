@@ -13,17 +13,31 @@ client = OpenAI(
 completion = client.chat.completions.create(
     model="bot-20250218193443-c7vhp",  # bot-20250212213506-gpp89 为您当前的智能体的ID，注意此处与Chat API存在差异。差异对比详见 SDK使用指南
     messages=[  # 通过会话传递历史信息，模型会参考上下文消息
-        {"role": "user", "content": "你是幻方量化公司私募的量化团队负责人，同时也是一位具有丰富经验的行业顶级量化师。你的背景还有整个幻方量化多年积累的模型和训练数据资源作为支撑，可以随时提供你使用。公司拟将1000万人民币的资金要投入A股市场，现在需要你设计交易策略和支撑算法。"},
+        {"role": "user", "content": "设计一个北海道旅游的攻略，包括景点、美食、住宿、交通等"},
         # {"role": "assistant", "content": "花椰菜又称菜花、花菜，是一种常见的蔬菜。"},
         # {"role": "user", "content": "再详细点"},
     ],
+    stream=True
 )
+
+# for chunk in completion:
+    # if chunk.references:
+    #     print(chunk.references)
+    # if not chunk.choices:
+    #     continue
+    # if chunk.choices[0].delta.reasoning_content:
+    #     print(chunk.choices[0].delta.reasoning_content, end="")  # 对于R1模型，输出reasoning content
+    # elif chunk.choices[0].delta.content:
+    #     print(chunk.choices[0].delta.content, end="")
+
+
 print(completion.choices[0].message.content)
-if hasattr(completion, "references"):
-    print("<references>")
-    print(completion.references)
-    print("</references>")
-if hasattr(completion.choices[0].message, "reasoning_content"):
-    print("<think>")
-    print(completion.choices[0].message.reasoning_content)  # 对于R1模型，输出reasoning content
-    print("</think>")
+
+# if hasattr(completion, "references"):
+#     print("<references>")
+#     print(completion.references)
+#     print("</references>")
+# if hasattr(completion.choices[0].message, "reasoning_content"):
+#     print("<think>")
+#     print(completion.choices[0].message.reasoning_content)  # 对于R1模型，输出reasoning content
+#     print("</think>")
