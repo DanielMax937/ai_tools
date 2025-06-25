@@ -1,0 +1,35 @@
+Total valid comparisons: 50
+Correct predictions: 40
+Mismatched predictions: 10
+Accuracy:  0.800 (80.0%)
+Precision: 0.767 (76.7%)
+Recall:    0.885 (88.5%)
+F1 Score:  0.821
+
+Confusion Matrix:
+                  Predicted
+                 Thought  Not-Thought
+Actual Thought       23         3
+   Not-Thought        7        17
+
+Metric Definitions:
+• Precision: Of all items classified as 'thought', how many were actually thoughts?
+• Recall: Of all actual thoughts, how many were correctly identified?
+• F1 Score: Harmonic mean of precision and recall
+============================================================
+
+================================================================================
+MISMATCHED RECORDS (10 total)
+================================================================================
+Index    Actual   Predicted    Title (truncated)
+--------------------------------------------------------------------------------
+1        N        thought      Has anyone else noticed truncation, tonal shifts, or fragmen...
+5        N        thought      ben_kurrek(@NEARProtocol)
+6        Y        not_thought  New Scientist(@newscientist)
+16       N        thought      davidad(@Plinz)
+18       N        thought      antonosika(@jxnlco)
+26       N        thought      Sonnet 4 vs o3 vs Gemini 2.5 pro vs Opus 4
+28       Y        not_thought  Support for http streamable MCP?
+36       Y        not_thought  DeepLearning.AI(@DeepLearningAI)
+42       N        thought      whstancil(@zacharynado)
+43       N        thought      PaulShellDev(@Austen)

@@ -1,0 +1,51 @@
+Total valid comparisons: 50
+Correct predictions: 25
+Mismatched predictions: 25
+Accuracy:  0.500 (50.0%)
+Precision: 1.000 (100.0%)
+Recall:    0.038 (3.8%)
+F1 Score:  0.074
+
+Confusion Matrix:
+                  Predicted
+                 Thought  Not-Thought
+Actual Thought        1        25
+   Not-Thought        0        24
+
+Metric Definitions:
+• Precision: Of all items classified as 'thought', how many were actually thoughts?
+• Recall: Of all actual thoughts, how many were correctly identified?
+• F1 Score: Harmonic mean of precision and recall
+============================================================
+
+================================================================================
+MISMATCHED RECORDS (25 total)
+================================================================================
+Index    Actual   Predicted    Title (truncated)
+--------------------------------------------------------------------------------
+6        Y        not_thought  New Scientist(@newscientist)
+11       Y        not_thought  Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)(@teortaxesTex)
+12       Y        not_thought  Is there any way to make next edit suggestions show below th...
+13       Y        not_thought  Usage Costs userscript - view $ costs live in the dashboard
+15       Y        not_thought  Geoffrey Litt(@geoffreylitt)
+19       Y        not_thought  Garry Tan(@garrytan)
+21       Y        not_thought  Sarah Catanzaro(@sarahcat21)
+24       Y        not_thought  Code review prompts
+25       Y        not_thought  Cursor updated permissions on Github on it's own?
+27       Y        not_thought  No or extremly slow performance
+28       Y        not_thought  Support for http streamable MCP?
+30       Y        not_thought  New update broke the agent
+31       Y        not_thought  Why does cursor never understand how to position things
+32       Y        not_thought  Can AI Tools Like Cursor + Claude Help Build Complex Apps?
+33       Y        not_thought  How are you guys not freezing up and using it so smoothly?
+34       Y        not_thought  Anyone think AI providers are purposely breaking Cursor?
+35       Y        not_thought  Yuchenj_UW(@Yuchenj_UW)
+36       Y        not_thought  DeepLearning.AI(@DeepLearningAI)
+38       Y        not_thought  LangChain(@LangChainAI)
+40       Y        not_thought  oykun(@stevesi)
+41       Y        not_thought  vig_xyz(@jxnlco)
+47       Y        not_thought  @karpathy
+48       Y        not_thought  @karpathy
+49       Y        not_thought  @karpathy
+50       Y        not_thought  @karpathy
+================================================================================
