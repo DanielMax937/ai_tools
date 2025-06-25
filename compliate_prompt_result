@@ -1,0 +1,42 @@
+Total valid comparisons: 50
+Correct predictions: 34
+Mismatched predictions: 16
+Accuracy:  0.680 (68.0%)
+Precision: 0.632 (63.2%)
+Recall:    0.923 (92.3%)
+F1 Score:  0.750
+
+Confusion Matrix:
+                  Predicted
+                 Thought  Not-Thought
+Actual Thought       24         2
+   Not-Thought       14        10
+
+Metric Definitions:
+• Precision: Of all items classified as 'thought', how many were actually thoughts?
+• Recall: Of all actual thoughts, how many were correctly identified?
+• F1 Score: Harmonic mean of precision and recall
+============================================================
+
+================================================================================
+MISMATCHED RECORDS (16 total)
+================================================================================
+Index    Actual   Predicted    Title (truncated)
+--------------------------------------------------------------------------------
+1        N        thought      Has anyone else noticed truncation, tonal shifts, or fragmen...
+2        N        thought      Previous version of deepseek in langchain...
+3        N        thought      skylar_b_payne(@jxnlco)
+8        N        thought      ashtonteng(@jefrankle)
+9        N        thought      summeryue0(@agihouse_org)
+10       N        thought      Qdrant(@qdrant_engine)
+12       Y        not_thought  Is there any way to make next edit suggestions show below th...
+14       N        thought      mervenoyann(@huggingface)
+17       N        thought      tomsietsema(@washingtonpost)
+23       N        thought      The Washington Post(@washingtonpost)
+28       Y        not_thought  Support for http streamable MCP?
+37       N        thought      InversionSpace(@olivercameron)
+39       N        thought      CPAC(@CPAC)
+42       N        thought      whstancil(@zacharynado)
+43       N        thought      PaulShellDev(@Austen)
+44       N        thought      privy_io(@garrytan)
+================================================================================
