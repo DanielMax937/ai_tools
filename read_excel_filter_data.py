@@ -215,9 +215,9 @@ def classify_content_with_langchain(title: str, content: str, client: OpenAI) ->
             <sum of scores>
 
             Conclusion:
-            - ≥ 27: Highly Insightful
-            - 21–26: Moderately Insightful
-            - ≤ 20: Weak or Not Insightful
+            - ≥ 25: Highly Insightful
+            - 16–24: Moderately Insightful
+            - ≤ 15: Weak or Not Insightful
 
             Please ensure your analysis reflects careful reasoning, not just surface-level interpretation.
             """
@@ -292,7 +292,7 @@ def classify_content_with_langchain(title: str, content: str, client: OpenAI) ->
             # Determine classification based on score or conclusion
             if total_score is not None:
                 # Use score-based classification
-                if total_score >= 21:  # Moderately or Highly Insightful
+                if total_score >= 16:  # Moderately or Highly Insightful
                     return 'thought'
                 else:  # <= 20: Weak or Not Insightful
                     return 'not_thought'
@@ -714,7 +714,7 @@ def print_metrics_report(metrics: Dict[str, float], mismatched_records: pd.DataF
     print_mismatched_records(mismatched_records)
 
 
-def read_and_classify_data(file_path: str, api_key: Optional[str] = None, max_rows: int = 100, classify_method: str = "multi_agents") -> None:
+def read_and_classify_data(file_path: str, api_key: Optional[str] = None, max_rows: int = 100, classify_method: str = "langchain") -> None:
     """
     Read the Filter_Data sheet, classify content using LLM, and save results.
     
@@ -724,6 +724,7 @@ def read_and_classify_data(file_path: str, api_key: Optional[str] = None, max_ro
         max_rows: Maximum number of rows to process (default: 100)
         classify_method: Classification method to use ('original', 'langchain', 'multi_agents')
     """
+    print(f"Starting processing with max_rows: {max_rows}, classify_method: {classify_method}")
     try:
         # Check if file exists
         if not Path(file_path).exists():
@@ -809,8 +810,8 @@ def read_and_classify_data(file_path: str, api_key: Optional[str] = None, max_ro
                 elif classify_method == "multi_agents":
                     classification = classify_content_with_multi_agents(title, content, client)
                 else:
-                    print(f"Warning: Unknown classify_method '{classify_method}', using default 'multi_agents'")
-                    classification = classify_content_with_multi_agents(title, content, client)
+                    print(f"Warning: Unknown classify_method '{classify_method}', using default 'langchain'")
+                    classification = classify_content_with_langchain(title, content, client)
                 
                 df.at[index, 'ai_result'] = classification
                 
@@ -877,7 +878,7 @@ def main():
     # Default values
     excel_file = "20250611.xlsx"
     max_rows = 4000
-    classify_method = "multi_agents"
+    classify_method = "langchain"
     
     # Parse command line arguments
     if len(sys.argv) > 1:
