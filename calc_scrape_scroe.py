@@ -263,7 +263,7 @@ def read_and_classify_data(file_path: str, api_key: Optional[str] = None, max_ro
         with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
             processed_count = 0
             for index, row in df.iterrows():
-                if index < 200:
+                if index < 1800:
                     continue
                 # Check if we've reached the limit
                 if processed_count >= max_rows:
