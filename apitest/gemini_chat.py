@@ -1,32 +1,16 @@
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import os
 import dotenv
 
 dotenv.load_dotenv()
-
+http_options = types.HttpOptions(
+    base_url="http://43.167.226.186:8745"
+)
 # Configure the SDK with your API key
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-
+client = genai.Client(api_key=os.environ["ONEAPI_FOR_GOOGLE"], http_options=http_options)
 # Create a Gemini Pro model
-model = genai.GenerativeModel('gemini-2.5-pro')
-
-# Start a chat session with an empty history
-chat = model.start_chat(history=[])
-
-print("🤖 Hello! I'm a chat bot powered by the Gemini API. Type 'exit' to end the conversation.")
-
-# Main chat loop
-while True:
-    # Get user input from the command line
-    user_input = input("You: ")
-    
-    # Check if the user wants to exit
-    if user_input.lower() == 'exit':
-        print("🤖 Goodbye!")
-        break
-        
-    # Send the user's message to the model
-    response = chat.send_message(user_input)
-    
-    # Print the model's response
-    print(f"Gemini: {response.text}")
+response = client.models.generate_content(
+    model='gemini-2.5-pro', contents='Why is the sky blue?'
+)
+print(response.text)
