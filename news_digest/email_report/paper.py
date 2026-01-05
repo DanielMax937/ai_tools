@@ -78,7 +78,6 @@ tools = [
     )
 ]
 # function_calling_llm = Gemini(model="models/gemini-2.0-flash-exp", api_key=os.getenv('GOOGLE_API_KEY'))
-# function_calling_llm = OpenAI(model="ep-20241222103914-fgbcp", api_key='8474f5ae-6e12-40d1-8e06-d453d9797fc3', api_base='https://ark.cn-beijing.volces.com/api/v3')
 function_calling_llm = AzureOpenAI(
     engine="gpt-4o", model="gpt-4o", temperature=0.0
 )

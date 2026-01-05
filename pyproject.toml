@@ -175,3 +175,9 @@ dependencies = [
 
 [tool.uv]
 editable = []
+
+[project.scripts]
+news-monitor = "news_digest.email_report.geopolitical_supply_chain_monitor:run_monitor"
+hn-ideas = "news_digest.email_report.hn:main"
+news-digest = "news_digest.email_report.news:main"
+paper-digest = "news_digest.email_report.paper:main"
