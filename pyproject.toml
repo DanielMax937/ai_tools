@@ -171,10 +171,14 @@ dependencies = [
     "Pillow>=10.0.0",
     "yt-dlp>=2025.1.27",
     "pydub>=0.25.1",
+    "llama-index-llms-openai-like>=0.3.4",
 ]
 
 [tool.uv]
-editable = []
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
 
 [project.scripts]
 news-monitor = "news_digest.email_report.geopolitical_supply_chain_monitor:run_monitor"

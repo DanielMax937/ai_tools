@@ -23,13 +23,25 @@ from dotenv import load_dotenv
 from urllib.parse import urlencode
 import xml.etree.ElementTree as ET
 
-try:
-    from openai import OpenAI
-except ImportError:  # Graceful fallback if openai not installed yet
-    OpenAI = None  # type: ignore
+from openai import OpenAI
 
 
 load_dotenv()
+
+# Model for geopolitical monitor (overridable via env / Ark endpoint id)
+# If GEO_OPENAI_MODEL is not set, fallback to ARK_MODEL_SEED_18 for convenience.
+GEO_OPENAI_MODEL = os.getenv("GEO_OPENAI_MODEL", os.getenv("ARK_MODEL_SEED_18", ""))
+
+# Initialize Ark-compatible OpenAI client for geopolitical monitor (expects ARK_API_KEY env var)
+_ark_api_key = os.getenv("ARK_API_KEY")
+if not _ark_api_key:
+    print("Warning: ARK_API_KEY not set; geopolitical relevance analysis will be skipped.")
+    geo_client = None
+else:
+    geo_client = OpenAI(
+        base_url="https://ark.cn-beijing.volces.com/api/v3",
+        api_key=_ark_api_key,
+    )
 
 
 BASE_RSS_URL = "https://news.google.com/rss/search"
@@ -130,49 +142,38 @@ def fetch_rss(url: str, timeout: int = 15) -> Optional[str]:
         return None
 
 
-def parse_rss_items(xml_text: str) -> List[Tuple[str, str, str]]:
-    """Parse RSS XML and extract (title, link, pub_date)."""
-    items: List[Tuple[str, str, str]] = []
+def parse_rss_items(xml_text: str) -> List[Tuple[str, str, str, str]]:
+    """Parse RSS XML and extract (title, link, pub_date, description)."""
+    items: List[Tuple[str, str, str, str]] = []
     try:
         root = ET.fromstring(xml_text)
         for item in root.iter("item"):
             title_el = item.find("title")
             link_el = item.find("link")
             date_el = item.find("pubDate")
+            desc_el = item.find("description")
             title = title_el.text if title_el is not None else ""
             link = link_el.text if link_el is not None else ""
             pub_date = date_el.text if date_el is not None else ""
+            description = desc_el.text if desc_el is not None else ""
             if title and link:
-                items.append((title, link, pub_date))
+                items.append((title, link, pub_date, description))
     except Exception as exc:  # noqa: BLE001
         print(f"  Error parsing RSS XML: {exc}")
     return items
 
 
-def get_openai_client() -> Optional[OpenAI]:
-    """Create an OpenAI client if OPENAI_API_KEY is set and package available."""
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("Warning: OPENAI_API_KEY not set; relevance analysis will be skipped.")
-        return None
-    if OpenAI is None:
-        print("Warning: openai package not installed; relevance analysis will be skipped.")
-        return None
-    return OpenAI(api_key=api_key)
-
-
 def analyze_relevance(
-    client: Optional[OpenAI],
     title: str,
-    commodity_name: str,
+    description: str,
     country: str,
-    model: str = "gpt-4o-mini",
+    commodities: List[str],
 ) -> Dict[str, Any]:
     """Use LLM API to determine if a news title is a relevant risk signal.
 
     If no client is available, returns a default non-relevant response.
     """
-    if client is None:
+    if geo_client is None:
         return {
             "is_relevant": False,
             "sentiment": "neutral",
@@ -181,21 +182,22 @@ def analyze_relevance(
 
     system_prompt = (
         "You are a commodities trading analyst. Determine if the following news "
-        "title implies a SUPPLY DISRUPTION or GEOPOLITICAL RISK for "
-        f"[{commodity_name}] in [{country}]. Return JSON: "
-        "{'is_relevant': bool, 'sentiment': 'bullish'/'bearish'/'neutral', "
-        "'reason': 'short string'}."
+        "item implies a SUPPLY DISRUPTION or GEOPOLITICAL RISK for the given "
+        "country and its key commodities. Return JSON: "
+        "{\"is_relevant\": bool, \"impacted_commodities\": list[str], "
+        "\"sentiment\": \"bullish\"/\"bearish\"/\"neutral\", "
+        "\"reason\": \"short string\"}."
     )
 
     try:
-        response = client.chat.completions.create(
-            model=model,
+        response = geo_client.chat.completions.create(
+            model=GEO_OPENAI_MODEL,
             messages=[
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": title},
+                {"role": "user", "content": f"Title: {title}\nDescription: {description}"},
             ],
         )
-        content = response.choices[0].message.content or ""  # type: ignore[assignment]
+        content = (response.choices[0].message.content or "")  # type: ignore[assignment]
         # Try to parse JSON from the model output. If parsing fails, fall back to neutral.
         content = content.strip()
         if not content:
@@ -317,8 +319,6 @@ def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
 def run_monitor() -> Dict[str, Any]:
     """Run the full monitoring pipeline and return a JSON-serializable report."""
     print("Starting Geopolitical Supply Chain Monitor (China Futures)...")
-    client = get_openai_client()
-
     all_hits: List[AnalyzedNewsItem] = []
 
     for country, cfg in WAR_ROOM_MAP.items():
@@ -331,16 +331,20 @@ def run_monitor() -> Dict[str, Any]:
         if not xml_text:
             continue
 
-        items = parse_rss_items(xml_text)
-        print(f"  Found {len(items)} raw news items.")
+        all_items = parse_rss_items(xml_text)
+        print(f"  Found {len(all_items)} raw news items.")
+        items = all_items[:20]
+        if len(all_items) > len(items):
+            print(f"  Limiting to {len(items)} items for analysis.")
 
-        for title, link, pub_date in items:
-            for commodity in commodities:
-                print(f"    Analyzing: {title} [{commodity}]")
-                analysis = analyze_relevance(client, title, commodity, country)
-                if not analysis.get("is_relevant", False):
-                    continue
+        for title, link, pub_date, description in items:
+            print(f"    Analyzing: {title} [{country}]")
+            analysis = analyze_relevance(title, description, country, commodities)
+            if not analysis.get("is_relevant", False):
+                continue
 
+            impacted = analysis.get("impacted_commodities") or commodities
+            for commodity in impacted:
                 analyzed_item = AnalyzedNewsItem(
                     country=country,
                     commodity=commodity,

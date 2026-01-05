@@ -6,7 +6,9 @@ import arxiv
 from llama_index.core.agent import FunctionCallingAgentWorker
 from llama_index.core.llms import ChatMessage
 from llama_index.llms.gemini import Gemini
-from llama_index.llms.azure_openai import AzureOpenAI
+from llama_index.llms.openai import OpenAI as LlamaOpenAI
+from llama_index.llms.openai_like import OpenAILike
+from openai import OpenAI as ArkOpenAI
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -14,6 +16,29 @@ from email.header import Header
 
 load_dotenv()
 client = arxiv.Client()
+
+
+# Model for paper research agent (overridable via env)
+PAPER_OPENAI_MODEL = os.getenv("ARK_MODEL_SEED_18", "gpt-4o-mini")
+
+# Initialize Ark-compatible OpenAI client for paper agent (expects ARK_API_KEY env var)
+_ark_api_key = os.getenv("ARK_API_KEY")
+if not _ark_api_key:
+    print("Warning: ARK_API_KEY not set; paper agent LLM will not be available.")
+    function_calling_llm = None
+else:
+    # LlamaIndex OpenAI wrapper using the Ark client and model
+    function_calling_llm = OpenAILike(
+        model=PAPER_OPENAI_MODEL,
+        api_key=_ark_api_key,
+        # LlamaIndex uses 'api_base' to override the base_url
+        api_base="https://ark.cn-beijing.volces.com/api/v3",
+        context_window=128000, 
+        # 2. Explicitly tell LlamaIndex this is a chat model
+        is_chat_model=True,
+        is_function_calling_model=True,
+        timeout=600.0,  # <--- Add this line (in seconds, e.g., 10 minutes)
+    )
 
 
 def search_arxiv_papers(
@@ -78,9 +103,6 @@ tools = [
     )
 ]
 # function_calling_llm = Gemini(model="models/gemini-2.0-flash-exp", api_key=os.getenv('GOOGLE_API_KEY'))
-function_calling_llm = AzureOpenAI(
-    engine="gpt-4o", model="gpt-4o", temperature=0.0
-)
 # Setup chatbot-style prefix messages
 def create_prefix_message():
     return [
@@ -99,13 +121,15 @@ def create_prefix_message():
 prefix_messages = create_prefix_message()
 
 # Initialize the agent
+if function_calling_llm is None:
+    raise RuntimeError("Paper agent LLM is not configured. Please set ARK_API_KEY.")
+
 agent = FunctionCallingAgentWorker(
-    tools=tools, # type: ignore
+    tools=tools,  # type: ignore
     llm=function_calling_llm,
     prefix_messages=prefix_messages,
     max_function_calls=20,
     allow_parallel_tool_calls=True,
-    verbose=True,
 ).as_agent()
 
 def send_email(content: str, is_html: bool = True):
@@ -256,4 +280,9 @@ def chatbot():
 
 
 if __name__ == "__main__":
+    chatbot()
+
+
+def main() -> None:
+    """Entry point for paper-digest script."""
     chatbot()

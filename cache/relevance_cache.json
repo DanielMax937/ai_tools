@@ -1,0 +1,18 @@
+{
+  "Ask HN: What projects are you working on now?_": {
+    "is_relevant": true,
+    "reason": "The post's title explicitly asks \"What projects are you working on now?\", which directly corresponds to the category \"What people are currently working on\" (option 1). It is a clear inquiry about ongoing projects participants are engaged in at the present time."
+  },
+  "Ask HN: What are you working on (August 2024)?_": {
+    "is_relevant": true,
+    "reason": "The post's title explicitly asks \"What are you working on (August 2024)?\", which directly corresponds to asking about what people are currently working on (category 1). The query targets users' ongoing projects during the specified current time period."
+  },
+  "Ask HN: What Are You Working On? (Nov 2025)_": {
+    "is_relevant": true,
+    "reason": "The post's title explicitly asks \"What Are You Working On?\", which directly aligns with category 1: asking about what people are currently working on."
+  },
+  "Ask HN: What Are You Working On? (December 2025)_": {
+    "is_relevant": true,
+    "reason": "The post's title is explicitly \"Ask HN: What Are You Working On? (December 2025)\", which directly asks participants about what they are currently working on, aligning with category 1."
+  }
+}
