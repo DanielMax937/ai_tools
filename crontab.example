@@ -1,0 +1,15 @@
+# Example crontab entries for ai_tools
+# Adjust paths to uv and this repo as needed before installing.
+# Install with: crontab crontab.example
+
+# Environment: ensure ARK_API_KEY, ARK_MODEL_SEED_18 / GEO_OPENAI_MODEL, OPENAI_API_KEY, EMAIL_* are set
+# in a profile file sourced by your shell, or export them in a wrapper script.
+
+# 1) 08:00 — ArXiv paper digest email
+0 8 * * * cd /root/ai_tools && uv run ./paper-digest >> /root/ai_tools/logs/paper-digest.log 2>&1
+
+# 2) 09:00 — HN ideas email
+0 9 * * * cd /root/ai_tools && uv run ./hn-ideas >> /root/ai_tools/logs/hn-ideas.log 2>&1
+
+# 3) 18:00 — Geopolitical supply chain monitor email
+0 18 * * * cd /root/ai_tools && uv run ./news-monitor >> /root/ai_tools/logs/news-monitor.log 2>&1
