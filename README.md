@@ -1,7 +1,23 @@
 # ai_tools
 
-## 安装依赖
-python -m playwright install
+## 环境与依赖安装（使用 uv）
+
+1. 安装 uv（如果尚未安装）：
+   ```bash
+   pip install uv
+   ```
+2. 在项目根目录安装依赖：
+   ```bash
+   uv sync
+   ```
+3. 示例：运行聊天界面：
+   ```bash
+   uv run python chat/chat_ui.py
+   ```
+
+## 其他说明
+
+原有的 `python -m playwright install` 等命令仍可在依赖安装完成后按需运行。
 
 ## TODO 0307
 1. 整合到iread
