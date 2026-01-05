@@ -16,11 +16,11 @@ import shutil
 
 # Import modules from our other scripts
 try:
-    from youtube_downloader import download_video, get_video_info
-    from audio_transcriber import process_audio_file
+    from video.youtube_downloader import download_video, get_video_info
+    from audio.audio_transcriber import process_audio_file
 except ImportError as e:
     print(f"Error importing required modules: {e}")
-    print("Make sure youtube_downloader.py and audio_transcriber.py are in the same directory")
+    print("Make sure you run this from the repo root so the audio/ and video/ packages are on PYTHONPATH")
     sys.exit(1)
 
 
