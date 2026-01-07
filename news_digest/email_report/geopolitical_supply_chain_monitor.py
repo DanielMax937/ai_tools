@@ -47,6 +47,39 @@ else:
 BASE_RSS_URL = "https://news.google.com/rss/search"
 
 
+# Translation maps for Chinese display
+COUNTRY_TRANSLATIONS = {
+    "Indonesia": "印度尼西亚",
+    "Myanmar": "缅甸",
+    "Guinea": "几内亚",
+    "Venezuela": "委内瑞拉",
+    "South Africa": "南非",
+    "Iran": "伊朗",
+    "Red Sea": "红海",
+    "Australia": "澳大利亚",
+    "Chile/Peru": "智利/秘鲁",
+    "Russia": "俄罗斯",
+    "Malaysia": "马来西亚",
+}
+
+COMMODITY_TRANSLATIONS = {
+    "Nickel": "镍",
+    "Palm Oil": "棕榈油",
+    "Rubber": "橡胶",
+    "Tin": "锡",
+    "Alumina": "氧化铝",
+    "Bitumen": "沥青",
+    "Manganese": "锰",
+    "Platinum": "铂金",
+    "Methanol": "甲醇",
+    "Crude Oil": "原油",
+    "EC (Shipping)": "EC（航运）",
+    "Iron Ore": "铁矿石",
+    "Lithium": "锂",
+    "Copper": "铜",
+}
+
+
 # Configuration map: country -> configuration about commodities and keywords
 WAR_ROOM_MAP: Dict[str, Dict[str, Any]] = {
     "Indonesia": {
@@ -176,17 +209,15 @@ def analyze_relevance(
     if geo_client is None:
         return {
             "is_relevant": False,
-            "sentiment": "neutral",
-            "reason": "LLM client not configured; skipping analysis.",
+            "sentiment": "中性",
+            "reason": "LLM客户端未配置，跳过分析。",
         }
 
     system_prompt = (
-        "You are a commodities trading analyst. Determine if the following news "
-        "item implies a SUPPLY DISRUPTION or GEOPOLITICAL RISK for the given "
-        "country and its key commodities. Return JSON: "
-        "{\"is_relevant\": bool, \"impacted_commodities\": list[str], "
-        "\"sentiment\": \"bullish\"/\"bearish\"/\"neutral\", "
-        "\"reason\": \"short string\"}."
+        "你是一位大宗商品交易分析师。判断以下新闻是否暗示给定国家及其关键商品存在供应中断或地缘政治风险。"
+        "返回JSON格式：{\"is_relevant\": bool, \"impacted_commodities\": list[str], "
+        "\"sentiment\": \"看涨\"/\"看跌\"/\"中性\", "
+        "\"reason\": \"简短说明\"}。请用中文回答。"
     )
 
     try:
@@ -213,15 +244,15 @@ def analyze_relevance(
         # Ensure required keys
         return {
             "is_relevant": bool(data.get("is_relevant", False)),
-            "sentiment": str(data.get("sentiment", "neutral")),
+            "sentiment": str(data.get("sentiment", "中性")),
             "reason": str(data.get("reason", "")),
         }
     except Exception as exc:  # noqa: BLE001
         print(f"  Error in AI analysis for title '{title}': {exc}")
         return {
             "is_relevant": False,
-            "sentiment": "neutral",
-            "reason": "Error during LLM analysis.",
+            "sentiment": "中性",
+            "reason": "LLM分析过程中出错。",
         }
 
 
@@ -267,14 +298,16 @@ def send_email_report(subject: str, html_content: str) -> None:
 def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
     """Build a simple HTML report for email."""
     if not analyzed_items:
-        return "<html><body><h2>No relevant supply disruptions detected in the last 24h.</h2></body></html>"
+        return "<html><body><h2>过去24小时未检测到相关供应链中断。</h2></body></html>"
 
     rows = []
     for item in analyzed_items:
+        country_cn = COUNTRY_TRANSLATIONS.get(item.country, item.country)
+        commodity_cn = COMMODITY_TRANSLATIONS.get(item.commodity, item.commodity)
         rows.append(
             f"<tr>"
-            f"<td>{item.country}</td>"
-            f"<td>{item.commodity}</td>"
+            f"<td>{country_cn}</td>"
+            f"<td>{commodity_cn}</td>"
             f"<td><a href='{item.link}'>{item.title}</a></td>"
             f"<td>{item.pub_date}</td>"
             f"<td>{item.sentiment}</td>"
@@ -294,16 +327,16 @@ def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
         </style>
       </head>
       <body>
-        <h2>Geopolitical Supply Chain Monitor - Red Alerts (Last 24h)</h2>
+        <h2>地缘供应链监控 - 红色预警（过去24小时）</h2>
         <table>
           <thead>
             <tr>
-              <th>Country</th>
-              <th>Commodity</th>
-              <th>Title</th>
-              <th>Pub Date</th>
-              <th>Sentiment</th>
-              <th>Reason</th>
+              <th>国家</th>
+              <th>商品</th>
+              <th>标题</th>
+              <th>发布日期</th>
+              <th>情绪</th>
+              <th>原因</th>
             </tr>
           </thead>
           <tbody>
@@ -333,7 +366,7 @@ def run_monitor() -> Dict[str, Any]:
 
         all_items = parse_rss_items(xml_text)
         print(f"  Found {len(all_items)} raw news items.")
-        items = all_items[:20]
+        items = all_items[:10]
         if len(all_items) > len(items):
             print(f"  Limiting to {len(items)} items for analysis.")
 
@@ -367,7 +400,7 @@ def run_monitor() -> Dict[str, Any]:
 
     # Email the report
     html = build_html_report(all_hits)
-    subject = "Geopolitical Supply Chain Monitor - Red Alerts (Last 24h)"
+    subject = "地缘供应链监控 - 红色预警（过去24小时）"
     send_email_report(subject, html)
 
     return report
