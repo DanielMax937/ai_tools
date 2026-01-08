@@ -11,6 +11,7 @@ import json
 import os
 import smtplib
 import sys
+from collections import defaultdict
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from email.header import Header
@@ -296,34 +297,61 @@ def send_email_report(subject: str, html_content: str) -> None:
 
 
 def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
-    """Build a simple HTML report for email."""
+    """Build a simple HTML report for email, grouped by commodity and sentiment."""
     if not analyzed_items:
         return "<html><body><h2>过去24小时未检测到相关供应链中断。</h2></body></html>"
 
-    rows = []
+    # Group by commodity and sentiment
+    grouped: Dict[str, Dict[str, List[AnalyzedNewsItem]]] = defaultdict(lambda: defaultdict(list))
+    
     for item in analyzed_items:
-        country_cn = COUNTRY_TRANSLATIONS.get(item.country, item.country)
         commodity_cn = COMMODITY_TRANSLATIONS.get(item.commodity, item.commodity)
-        rows.append(
-            f"<tr>"
-            f"<td>{country_cn}</td>"
-            f"<td>{commodity_cn}</td>"
-            f"<td><a href='{item.link}'>{item.title}</a></td>"
-            f"<td>{item.pub_date}</td>"
-            f"<td>{item.sentiment}</td>"
-            f"<td>{item.reason}</td>"
-            f"</tr>"
-        )
+        grouped[commodity_cn][item.sentiment].append(item)
 
-    table_body = "\n".join(rows)
+    # Build HTML sections for each commodity
+    sections = []
+    for commodity in sorted(grouped.keys()):
+        sentiment_groups = grouped[commodity]
+        
+        # Build rows for this commodity
+        commodity_rows = []
+        for sentiment in sorted(sentiment_groups.keys()):
+            items = sentiment_groups[sentiment]
+            
+            # Create a list of news items with links for this commodity+sentiment group
+            news_items_html = []
+            for item in items:
+                news_items_html.append(
+                    f"<div style='margin-bottom: 8px;'>"
+                    f"<a href='{item.link}' target='_blank'>{item.title}</a><br/>"
+                    f"<span style='color: #666; font-size: 12px;'>{item.reason}</span><br/>"
+                    f"<span style='color: #999; font-size: 11px;'>{item.pub_date}</span>"
+                    f"</div>"
+                )
+            
+            news_items_combined = "\n".join(news_items_html)
+            
+            commodity_rows.append(
+                f"<tr>"
+                f"<td style='vertical-align: top;'>{commodity}</td>"
+                f"<td style='vertical-align: top;'>{sentiment}</td>"
+                f"<td>{news_items_combined}</td>"
+                f"</tr>"
+            )
+        
+        sections.extend(commodity_rows)
+
+    table_body = "\n".join(sections)
     html = f"""
     <html>
       <head>
         <meta charset="utf-8" />
         <style>
           table {{ border-collapse: collapse; width: 100%; }}
-          th, td {{ border: 1px solid #ddd; padding: 8px; font-size: 13px; }}
-          th {{ background-color: #f2f2f2; }}
+          th, td {{ border: 1px solid #ddd; padding: 12px; font-size: 13px; }}
+          th {{ background-color: #f2f2f2; font-weight: bold; }}
+          a {{ color: #0066cc; text-decoration: none; }}
+          a:hover {{ text-decoration: underline; }}
         </style>
       </head>
       <body>
@@ -331,12 +359,9 @@ def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
         <table>
           <thead>
             <tr>
-              <th>国家</th>
-              <th>商品</th>
-              <th>标题</th>
-              <th>发布日期</th>
-              <th>情绪</th>
-              <th>原因</th>
+              <th style='width: 15%;'>商品</th>
+              <th style='width: 10%;'>情绪</th>
+              <th style='width: 75%;'>新闻详情</th>
             </tr>
           </thead>
           <tbody>
