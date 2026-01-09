@@ -13,10 +13,11 @@ import smtplib
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, asdict
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.utils import parsedate_to_datetime
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
@@ -197,6 +198,30 @@ def parse_rss_items(xml_text: str) -> List[Tuple[str, str, str, str]]:
     return items
 
 
+def is_within_3_days(pub_date_str: str) -> bool:
+    """Check if the publication date is within the last 3 days.
+    
+    Args:
+        pub_date_str: RFC 2822 date string from RSS feed
+        
+    Returns:
+        True if within 3 days, False otherwise
+    """
+    if not pub_date_str:
+        return False
+    
+    try:
+        pub_date = parsedate_to_datetime(pub_date_str)
+        now = datetime.now(timezone.utc)
+        three_days_ago = now - timedelta(days=3)
+        
+        return pub_date >= three_days_ago
+    except Exception as exc:  # noqa: BLE001
+        print(f"  Error parsing date '{pub_date_str}': {exc}")
+        # If we can't parse the date, include it to be safe
+        return True
+
+
 def analyze_relevance(
     title: str,
     description: str,
@@ -299,7 +324,7 @@ def send_email_report(subject: str, html_content: str) -> None:
 def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
     """Build a simple HTML report for email, grouped by commodity and sentiment."""
     if not analyzed_items:
-        return "<html><body><h2>过去24小时未检测到相关供应链中断。</h2></body></html>"
+        return "<html><body><h2>过去3天未检测到相关供应链中断。</h2></body></html>"
 
     # Group by commodity and sentiment
     grouped: Dict[str, Dict[str, List[AnalyzedNewsItem]]] = defaultdict(lambda: defaultdict(list))
@@ -355,7 +380,7 @@ def build_html_report(analyzed_items: List[AnalyzedNewsItem]) -> str:
         </style>
       </head>
       <body>
-        <h2>地缘供应链监控 - 红色预警（过去24小时）</h2>
+        <h2>地缘供应链监控 - 红色预警（过去3天）</h2>
         <table>
           <thead>
             <tr>
@@ -391,8 +416,13 @@ def run_monitor() -> Dict[str, Any]:
 
         all_items = parse_rss_items(xml_text)
         print(f"  Found {len(all_items)} raw news items.")
-        items = all_items[:10]
-        if len(all_items) > len(items):
+        
+        # Filter items within 3 days
+        recent_items = [(t, l, p, d) for t, l, p, d in all_items if is_within_3_days(p)]
+        print(f"  {len(recent_items)} items within last 3 days.")
+        
+        items = recent_items[:20]
+        if len(recent_items) > len(items):
             print(f"  Limiting to {len(items)} items for analysis.")
 
         for title, link, pub_date, description in items:
@@ -425,7 +455,7 @@ def run_monitor() -> Dict[str, Any]:
 
     # Email the report
     html = build_html_report(all_hits)
-    subject = "地缘供应链监控 - 红色预警（过去24小时）"
+    subject = "地缘供应链监控 - 红色预警（过去3天）"
     send_email_report(subject, html)
 
     return report
