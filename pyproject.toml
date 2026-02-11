@@ -185,3 +185,4 @@ news-monitor = "news_digest.email_report.geopolitical_supply_chain_monitor:run_m
 hn-ideas = "news_digest.email_report.hn:main"
 news-digest = "news_digest.email_report.news:main"
 paper-digest = "news_digest.email_report.paper:main"
+pm-monitor = "news_digest.email_report.polymarket_futures_monitor:run_monitor"
