@@ -1,0 +1,15 @@
+{
+  "name": "ai_tools",
+  "version": "1.0.0",
+  "description": "## 环境与依赖安装（使用 uv）",
+  "main": "nvidia-chat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^6.29.0"
+  }
+}
