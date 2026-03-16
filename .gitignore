@@ -171,3 +171,5 @@ cython_debug/
 .pypirc
 .csv
 .xlsx
+node_modules/
+nvidia-chat.js
