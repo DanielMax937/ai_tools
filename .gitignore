@@ -173,3 +173,4 @@ cython_debug/
 .xlsx
 node_modules/
 nvidia-chat.js
+.DS_Store

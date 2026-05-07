@@ -1,12 +1,19 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
 const test = require('node:test');
 
 const {
   buildSummary,
+  loadEnvFile,
   parseArgs,
   TimeoutError,
   withTimeout,
 } = require('../nvidia-model-benchmark');
+const {
+  DEFAULT_PROXY_URL,
+} = require('../nvidia-model-benchmark-proxy');
 
 test('parseArgs keeps benchmark defaults and accepts overrides', () => {
   const options = parseArgs([
@@ -72,4 +79,31 @@ test('withTimeout rejects slow work with TimeoutError', async () => {
     () => withTimeout(() => new Promise((resolve) => setTimeout(resolve, 50)), 5, 'too slow'),
     TimeoutError,
   );
+});
+
+test('loadEnvFile loads .env values without overriding existing env', () => {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'nvidia-env-'));
+  const envPath = path.join(tempDir, '.env');
+  fs.writeFileSync(
+    envPath,
+    [
+      '# local benchmark config',
+      'NVIDIA_API_KEY=from-dotenv',
+      'NVIDIA_BASE_URL="https://example.test/v1"',
+      'EXISTING=value-from-dotenv',
+      '',
+    ].join('\n'),
+  );
+
+  const env = { EXISTING: 'from-shell' };
+  const loaded = loadEnvFile(envPath, env);
+
+  assert.equal(loaded, true);
+  assert.equal(env.NVIDIA_API_KEY, 'from-dotenv');
+  assert.equal(env.NVIDIA_BASE_URL, 'https://example.test/v1');
+  assert.equal(env.EXISTING, 'from-shell');
+});
+
+test('proxy benchmark script defaults to the local HTTP proxy', () => {
+  assert.equal(DEFAULT_PROXY_URL, 'http://127.0.0.1:1087');
 });
