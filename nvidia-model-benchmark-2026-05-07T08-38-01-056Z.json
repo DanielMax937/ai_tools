@@ -1,0 +1,6137 @@
+{
+  "metadata": {
+    "baseURL": "https://integrate.api.nvidia.com/v1",
+    "prompt": "请用一句中文回答：今天适合做什么？",
+    "runs": 3,
+    "timeoutMs": 60000,
+    "maxTokens": 128,
+    "delayMs": 1500,
+    "totalModelsReturned": 137,
+    "totalModelsBenchmarked": 137,
+    "startedAt": "2026-05-07T09:34:23.267Z"
+  },
+  "results": [
+    {
+      "model": "01-ai/yi-large",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 330,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "01-ai/yi-large",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 932,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "01-ai/yi-large",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 914,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "abacusai/dracarys-llama-3.1-70b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 3531,
+      "totalMs": 4260,
+      "responseChars": 8,
+      "responsePreview": "今天适合做运动。"
+    },
+    {
+      "model": "abacusai/dracarys-llama-3.1-70b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 988,
+      "totalMs": 1213,
+      "responseChars": 8,
+      "responsePreview": "今天适合做运动。"
+    },
+    {
+      "model": "abacusai/dracarys-llama-3.1-70b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 683,
+      "totalMs": 1623,
+      "responseChars": 8,
+      "responsePreview": "今天适合做运动。"
+    },
+    {
+      "model": "adept/fuyu-8b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 528,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "adept/fuyu-8b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 359,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "adept/fuyu-8b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 312,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ai21labs/jamba-1.5-large-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 339,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ai21labs/jamba-1.5-large-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 470,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ai21labs/jamba-1.5-large-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 292,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "aisingapore/sea-lion-7b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 277,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "aisingapore/sea-lion-7b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 273,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "aisingapore/sea-lion-7b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 354,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "baai/bge-m3",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 302,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "baai/bge-m3",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 1448,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "baai/bge-m3",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 276,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "bigcode/starcoder2-15b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 692,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "bigcode/starcoder2-15b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 263,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "bigcode/starcoder2-15b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 302,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "bytedance/seed-oss-36b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 11698,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "bytedance/seed-oss-36b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 17142,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "bytedance/seed-oss-36b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 16000,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "databricks/dbrx-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 827,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "databricks/dbrx-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 355,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "databricks/dbrx-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 1019,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-coder-6.7b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 301,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-coder-6.7b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 298,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-coder-6.7b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 305,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 1569,
+      "totalMs": 4677,
+      "responseChars": 26,
+      "responsePreview": "今天适合根据天气和心情，做让自己感到充实或放松的事。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 704,
+      "totalMs": 929,
+      "responseChars": 17,
+      "responsePreview": "今天适合静心规划，为未来积蓄力量。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1669,
+      "totalMs": 3594,
+      "responseChars": 26,
+      "responsePreview": "今天适合根据天气和心情，做让自己感到充实或放松的事。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60020,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "deepseek-ai/deepseek-v4-flash attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 2232,
+      "totalMs": 2718,
+      "responseChars": 17,
+      "responsePreview": "今天适合静心规划，为未来积蓄力量。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60015,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "deepseek-ai/deepseek-v4-flash attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 1910,
+      "totalMs": 10375,
+      "responseChars": 29,
+      "responsePreview": "今天宜静心读书、整理思绪，也适合与亲友小聚，共享温暖时光。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 510,
+      "totalMs": 1181,
+      "responseChars": 20,
+      "responsePreview": "今天宜静心读书、整理旧物，或与好友小聚。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": 450,
+      "totalMs": 3402,
+      "responseChars": 16,
+      "responsePreview": "今天宜静心读书、整理思绪，也适合",
+      "error": {
+        "name": "TypeError",
+        "message": "terminated"
+      }
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 22414,
+      "totalMs": 26780,
+      "responseChars": 32,
+      "responsePreview": "今天宜静心读书、整理思绪，也适合与亲友小聚，享受温和的春日时光。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1454,
+      "totalMs": 1475,
+      "responseChars": 20,
+      "responsePreview": "今天宜静心读书、整理旧物，或与好友小聚。"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1636,
+      "totalMs": 10425,
+      "responseChars": 29,
+      "responsePreview": "今天宜静心读书、整理思绪，也适合与亲友小聚，共享秋日暖阳。"
+    },
+    {
+      "model": "google/codegemma-1.1-7b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 297,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/codegemma-1.1-7b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 125,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/codegemma-1.1-7b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 155,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/codegemma-7b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 131,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/codegemma-7b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 172,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/codegemma-7b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 189,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/deplot",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 128,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/deplot",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 293,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/deplot",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 418,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/gemma-2-2b-it",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 1221,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "422 \"body -> temperature\\n  Input should be greater than 0 (type=greater_than; gt=0.0)\"",
+        "status": 422
+      }
+    },
+    {
+      "model": "google/gemma-2-2b-it",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 332,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "422 \"body -> temperature\\n  Input should be greater than 0 (type=greater_than; gt=0.0)\"",
+        "status": 422
+      }
+    },
+    {
+      "model": "google/gemma-2-2b-it",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 631,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "422 \"body -> temperature\\n  Input should be greater than 0 (type=greater_than; gt=0.0)\"",
+        "status": 422
+      }
+    },
+    {
+      "model": "google/gemma-2b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 129,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/gemma-2b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 135,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/gemma-2b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 177,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 2094,
+      "totalMs": 2522,
+      "responseChars": 20,
+      "responsePreview": "今天适合放松一下，做些自己喜欢的事情。\n"
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1367,
+      "totalMs": 1901,
+      "responseChars": 20,
+      "responsePreview": "今天适合放松一下，做些自己喜欢的事情。\n"
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1899,
+      "totalMs": 2356,
+      "responseChars": 20,
+      "responsePreview": "今天适合放松一下，做些自己喜欢的事情。\n"
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 111,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60009,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "google/gemma-3-27b-it attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 58147,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "EngineCore encountered an issue. See stack trace (above) for the root cause.",
+        "code": 400
+      }
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 2554,
+      "totalMs": 4781,
+      "responseChars": 35,
+      "responsePreview": "今天适合在家放松一下，看看书、听听音乐，或者出门走走，呼吸新鲜空气。\n"
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 2647,
+      "totalMs": 3612,
+      "responseChars": 35,
+      "responsePreview": "今天适合在家放松一下，看看书、听听音乐，或者出门走走，呼吸新鲜空气。\n"
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1976,
+      "totalMs": 3594,
+      "responseChars": 35,
+      "responsePreview": "今天适合在家放松一下，看看书、听听音乐，或者出门走走，呼吸新鲜空气。\n"
+    },
+    {
+      "model": "google/gemma-3n-e2b-it",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 743,
+      "totalMs": 2659,
+      "responseChars": 37,
+      "responsePreview": "今天适合放松身心，做一些自己喜欢的事情，比如看书、听音乐或者和朋友聊天。\n"
+    },
+    {
+      "model": "google/gemma-3n-e2b-it",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 589,
+      "totalMs": 1680,
+      "responseChars": 37,
+      "responsePreview": "今天适合放松身心，做一些自己喜欢的事情，比如看书、听音乐或者和朋友聊天。\n"
+    },
+    {
+      "model": "google/gemma-3n-e2b-it",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 740,
+      "totalMs": 2088,
+      "responseChars": 37,
+      "responsePreview": "今天适合放松身心，做一些自己喜欢的事情，比如看书、听音乐或者和朋友聊天。\n"
+    },
+    {
+      "model": "google/gemma-3n-e4b-it",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 657,
+      "totalMs": 2921,
+      "responseChars": 40,
+      "responsePreview": "今天适合放松心情，做一些自己喜欢的事情，比如看看书、听听音乐或者和朋友聊聊天。\n"
+    },
+    {
+      "model": "google/gemma-3n-e4b-it",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 668,
+      "totalMs": 2170,
+      "responseChars": 40,
+      "responsePreview": "今天适合放松心情，做一些自己喜欢的事情，比如看看书、听听音乐或者和朋友聊聊天。\n"
+    },
+    {
+      "model": "google/gemma-3n-e4b-it",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 627,
+      "totalMs": 2299,
+      "responseChars": 40,
+      "responsePreview": "今天适合放松心情，做一些自己喜欢的事情，比如看看书、听听音乐或者和朋友聊聊天。\n"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 31618,
+      "totalMs": 31937,
+      "responseChars": 20,
+      "responsePreview": "今天适合做一件让你感到快乐且放松的事情。"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 29423,
+      "totalMs": 33209,
+      "responseChars": 20,
+      "responsePreview": "今天适合做一件让你感到快乐且放松的小事。"
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 474,
+      "totalMs": 785,
+      "responseChars": 20,
+      "responsePreview": "今天适合做一件让你感到快乐且放松的小事。"
+    },
+    {
+      "model": "google/recurrentgemma-2b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 806,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/recurrentgemma-2b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 398,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "google/recurrentgemma-2b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 808,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-3.0-3b-a800m-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 393,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-3.0-3b-a800m-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 325,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-3.0-3b-a800m-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 315,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-3.0-8b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 317,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-3.0-8b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 827,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-3.0-8b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 324,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-34b-code-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 1120,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-34b-code-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 379,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-34b-code-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 341,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-8b-code-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 326,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-8b-code-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 311,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "ibm/granite-8b-code-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 351,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "meta/codellama-70b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 312,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "meta/codellama-70b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 355,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "meta/codellama-70b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 318,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "meta/llama-3.1-70b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 689,
+      "totalMs": 1963,
+      "responseChars": 29,
+      "responsePreview": "今天适合做一些放松身心的事情，比如阅读、散步或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.1-70b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 2067,
+      "totalMs": 4131,
+      "responseChars": 29,
+      "responsePreview": "今天适合做一些放松身心的事情，比如阅读、散步或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.1-70b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1445,
+      "totalMs": 2745,
+      "responseChars": 29,
+      "responsePreview": "今天适合做一些放松身心的事情，比如阅读、散步或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.1-8b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 335,
+      "totalMs": 1938,
+      "responseChars": 55,
+      "responsePreview": "今天适合去户外活动，例如去公园散步、骑自行车或去附近的景点游览。天气好的时候，户外活动可以让人感到放松和愉快。"
+    },
+    {
+      "model": "meta/llama-3.1-8b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 355,
+      "totalMs": 3714,
+      "responseChars": 55,
+      "responsePreview": "今天适合去户外活动，例如去公园散步、骑自行车或去附近的景点游览。天气好的时候，户外活动可以让人感到放松和愉快。"
+    },
+    {
+      "model": "meta/llama-3.1-8b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 782,
+      "totalMs": 2270,
+      "responseChars": 55,
+      "responsePreview": "今天适合去户外活动，例如去公园散步、骑自行车或去附近的景点游览。天气好的时候，户外活动可以让人感到放松和愉快。"
+    },
+    {
+      "model": "meta/llama-3.2-11b-vision-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 632,
+      "totalMs": 1947,
+      "responseChars": 36,
+      "responsePreview": "今天适合做一些轻松愉快的事情，例如去公园散步、读书、听音乐或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.2-11b-vision-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 556,
+      "totalMs": 1318,
+      "responseChars": 36,
+      "responsePreview": "今天适合做一些轻松愉快的事情，例如去公园散步、读书、听音乐或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.2-11b-vision-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 565,
+      "totalMs": 1677,
+      "responseChars": 36,
+      "responsePreview": "今天适合做一些轻松愉快的事情，例如去公园散步、读书、听音乐或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.2-1b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 556,
+      "totalMs": 1574,
+      "responseChars": 22,
+      "responsePreview": "今天适合做运动、锻炼、锻炼身体、锻炼心脏等。"
+    },
+    {
+      "model": "meta/llama-3.2-1b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1084,
+      "totalMs": 1777,
+      "responseChars": 22,
+      "responsePreview": "今天适合做运动、锻炼、锻炼身体、锻炼心脏等。"
+    },
+    {
+      "model": "meta/llama-3.2-1b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 524,
+      "totalMs": 1767,
+      "responseChars": 22,
+      "responsePreview": "今天适合做运动、锻炼、锻炼身体、锻炼心脏等。"
+    },
+    {
+      "model": "meta/llama-3.2-3b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 5281,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TypeError",
+        "message": "terminated"
+      }
+    },
+    {
+      "model": "meta/llama-3.2-3b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": 6096,
+      "totalMs": 60005,
+      "responseChars": 31,
+      "responsePreview": "今天适合做一些轻松愉快的事情，例如散步、阅读、做一些手工艺品或",
+      "error": {
+        "name": "TimeoutError",
+        "message": "meta/llama-3.2-3b-instruct attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "meta/llama-3.2-3b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": 5126,
+      "totalMs": 60003,
+      "responseChars": 32,
+      "responsePreview": "今天适合做一些轻松愉快的事情，例如散步、阅读、做一些手工艺品或与",
+      "error": {
+        "name": "TimeoutError",
+        "message": "meta/llama-3.2-3b-instruct attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "meta/llama-3.2-90b-vision-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 586,
+      "totalMs": 3320,
+      "responseChars": 29,
+      "responsePreview": "今天适合做一些放松身心的事情，比如阅读、散步或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.2-90b-vision-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 464,
+      "totalMs": 1875,
+      "responseChars": 29,
+      "responsePreview": "今天适合做一些放松身心的事情，比如阅读、散步或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.2-90b-vision-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 372,
+      "totalMs": 1499,
+      "responseChars": 29,
+      "responsePreview": "今天适合做一些放松身心的事情，比如阅读、散步或与朋友聚会。"
+    },
+    {
+      "model": "meta/llama-3.3-70b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 165,
+      "totalMs": 529,
+      "responseChars": 21,
+      "responsePreview": "今天适合出去散步、锻炼身体或者尝试新食谱。"
+    },
+    {
+      "model": "meta/llama-3.3-70b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 284,
+      "totalMs": 975,
+      "responseChars": 21,
+      "responsePreview": "今天适合出去散步、锻炼身体或者尝试新食谱。"
+    },
+    {
+      "model": "meta/llama-3.3-70b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 3355,
+      "totalMs": 16042,
+      "responseChars": 21,
+      "responsePreview": "今天适合出去散步、锻炼身体或者尝试新食谱。"
+    },
+    {
+      "model": "meta/llama-4-maverick-17b-128e-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 336,
+      "totalMs": 472,
+      "responseChars": 14,
+      "responsePreview": "今天天气晴朗，适合外出徒步。"
+    },
+    {
+      "model": "meta/llama-4-maverick-17b-128e-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 762,
+      "totalMs": 985,
+      "responseChars": 14,
+      "responsePreview": "今天天气晴朗，适合外出徒步。"
+    },
+    {
+      "model": "meta/llama-4-maverick-17b-128e-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 351,
+      "totalMs": 490,
+      "responseChars": 14,
+      "responsePreview": "今天天气晴朗，适合外出徒步。"
+    },
+    {
+      "model": "meta/llama-guard-4-12b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 1428,
+      "totalMs": 1429,
+      "responseChars": 4,
+      "responsePreview": "safe"
+    },
+    {
+      "model": "meta/llama-guard-4-12b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 392,
+      "totalMs": 392,
+      "responseChars": 4,
+      "responsePreview": "safe"
+    },
+    {
+      "model": "meta/llama-guard-4-12b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 409,
+      "totalMs": 432,
+      "responseChars": 4,
+      "responsePreview": "safe"
+    },
+    {
+      "model": "meta/llama2-70b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 115,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "meta/llama2-70b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 189,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "meta/llama2-70b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 365,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/kosmos-2",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 124,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/kosmos-2",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 247,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/kosmos-2",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 195,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-3-vision-128k-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 127,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-3-vision-128k-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 119,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-3-vision-128k-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 113,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-3.5-moe-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 113,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-3.5-moe-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 121,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-3.5-moe-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 111,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "microsoft/phi-4-mini-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60008,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "microsoft/phi-4-mini-instruct attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "microsoft/phi-4-mini-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60002,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "microsoft/phi-4-mini-instruct attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "microsoft/phi-4-mini-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60001,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "microsoft/phi-4-mini-instruct attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "microsoft/phi-4-multimodal-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 343,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "microsoft/phi-4-multimodal-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 132,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "microsoft/phi-4-multimodal-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 243,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "minimaxai/minimax-m2.5",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 44153,
+      "totalMs": 46324,
+      "responseChars": 160,
+      "responsePreview": "<think>这个问题要求我用一句中文回答\"今天适合做什么？\"。这是一个开放性的日常问题，没有具体的上下文。我应该给出一个通用、积极的建议，适合大多数人今天做的事情。\n\n考虑到这是2024年12月19日，冬天天气可能比较冷，我可以给出一个应景的建议。\n</think>\n\n今天适合喝杯热茶，看看书或者电影，放松一下身心。"
+    },
+    {
+      "model": "minimaxai/minimax-m2.5",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1089,
+      "totalMs": 1584,
+      "responseChars": 119,
+      "responsePreview": "<think>用户用中文问\"今天适合做什么？\"，要求用一句中文回答。\n\n这个问题比较开放，没有具体的时间信息。我可以给一个通用、积极的建议，适合大多数情况。\n</think>\n\n今天适合出门散步，感受阳光，呼吸新鲜空气，让身心都放松一下。"
+    },
+    {
+      "model": "minimaxai/minimax-m2.5",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 546,
+      "totalMs": 1210,
+      "responseChars": 134,
+      "responsePreview": "<think>这个问题要求我用一句中文回答\"今天适合做什么？\"。这是一个开放性的日常问题，没有具体的上下文信息。我应该给出一个通用、积极的建议，适合大多数人的日常活动。\n</think>\n\n今天适合出门散步，感受阳光，呼吸新鲜空气，或者在家看看书、听听音乐，放松身心。"
+    },
+    {
+      "model": "minimaxai/minimax-m2.7",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 6928,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "minimaxai/minimax-m2.7",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 7831,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "minimaxai/minimax-m2.7",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 5926,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "mistralai/codestral-22b-instruct-v0.1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 197,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/codestral-22b-instruct-v0.1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 111,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/codestral-22b-instruct-v0.1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 343,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/devstral-2-123b-instruct-2512",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60002,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "mistralai/devstral-2-123b-instruct-2512 attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "mistralai/devstral-2-123b-instruct-2512",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": 59315,
+      "totalMs": 60004,
+      "responseChars": 2,
+      "responsePreview": "今天",
+      "error": {
+        "name": "TimeoutError",
+        "message": "mistralai/devstral-2-123b-instruct-2512 attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "mistralai/devstral-2-123b-instruct-2512",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 4186,
+      "totalMs": 4700,
+      "responseChars": 16,
+      "responsePreview": "今天适合放松心情，享受美好时光！"
+    },
+    {
+      "model": "mistralai/magistral-small-2506",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 6920,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "mistralai/magistral-small-2506",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 7063,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "mistralai/magistral-small-2506",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 7111,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "mistralai/ministral-14b-instruct-2512",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 371,
+      "totalMs": 775,
+      "responseChars": 30,
+      "responsePreview": "今天适合**出去散步、看书、做运动或享受一顿简单的美食**！"
+    },
+    {
+      "model": "mistralai/ministral-14b-instruct-2512",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 380,
+      "totalMs": 745,
+      "responseChars": 38,
+      "responsePreview": "今天适合**出去散步、看书、做点轻松的小事**，或者**享受阳光和清风**！"
+    },
+    {
+      "model": "mistralai/ministral-14b-instruct-2512",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 425,
+      "totalMs": 756,
+      "responseChars": 30,
+      "responsePreview": "今天适合**出去散步、看书、做运动或享受一顿简单的美食**！"
+    },
+    {
+      "model": "mistralai/mistral-7b-instruct-v0.3",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 425,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-7b-instruct-v0.3",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 131,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-7b-instruct-v0.3",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 106,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 116,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 123,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 112,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large-2-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 123,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large-2-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 128,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large-2-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 142,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 5721,
+      "totalMs": 8114,
+      "responseChars": 18,
+      "responsePreview": "今天适合放松心情，做些自己喜欢的事。"
+    },
+    {
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 813,
+      "totalMs": 1176,
+      "responseChars": 31,
+      "responsePreview": "今天适合做一些轻松愉快的事情，比如散步、阅读或享受美食。 😊"
+    },
+    {
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 670,
+      "totalMs": 5819,
+      "responseChars": 28,
+      "responsePreview": "今天适合做一些轻松舒适的事情，比如阅读、散步或享受美食。"
+    },
+    {
+      "model": "mistralai/mistral-medium-3-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 114,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-medium-3-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 123,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-medium-3-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 242,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 261,
+      "totalMs": 446,
+      "responseChars": 12,
+      "responsePreview": "今天适合散步享受好天气！"
+    },
+    {
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 3045,
+      "totalMs": 3234,
+      "responseChars": 12,
+      "responsePreview": "今天适合散步享受好天气。"
+    },
+    {
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 163,
+      "totalMs": 481,
+      "responseChars": 16,
+      "responsePreview": "今天适合放松心情，做点开心的事！"
+    },
+    {
+      "model": "mistralai/mistral-nemotron",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 125,
+      "totalMs": 481,
+      "responseChars": 15,
+      "responsePreview": "今天适合做一件让自己开心的事！"
+    },
+    {
+      "model": "mistralai/mistral-nemotron",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 188,
+      "totalMs": 446,
+      "responseChars": 15,
+      "responsePreview": "今天适合做一件让自己开心的事！"
+    },
+    {
+      "model": "mistralai/mistral-nemotron",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 236,
+      "totalMs": 417,
+      "responseChars": 15,
+      "responsePreview": "今天适合做一件让自己开心的事！"
+    },
+    {
+      "model": "mistralai/mistral-small-4-119b-2603",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 544,
+      "totalMs": 1442,
+      "responseChars": 13,
+      "responsePreview": "今天适合做你想做的任何事！"
+    },
+    {
+      "model": "mistralai/mistral-small-4-119b-2603",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1653,
+      "totalMs": 1655,
+      "responseChars": 13,
+      "responsePreview": "今天适合做你想做的任何事！"
+    },
+    {
+      "model": "mistralai/mistral-small-4-119b-2603",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 188,
+      "totalMs": 730,
+      "responseChars": 13,
+      "responsePreview": "今天适合做你想做的任何事！"
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-instruct-v0.1",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 45757,
+      "totalMs": 46802,
+      "responseChars": 25,
+      "responsePreview": " 今天气温宜人，适合去公园散步或者和家人一起野餐。"
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-instruct-v0.1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 578,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-instruct-v0.1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 3161,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-v0.1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 8990,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-v0.1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 135,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-v0.1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 100,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "mistralai/mixtral-8x7b-instruct-v0.1",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 577,
+      "totalMs": 1258,
+      "responseChars": 34,
+      "responsePreview": " 今天是个美好的下午，你有没有想学习 algoDS 的新算法呢？😊"
+    },
+    {
+      "model": "mistralai/mixtral-8x7b-instruct-v0.1",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 3602,
+      "totalMs": 4318,
+      "responseChars": 34,
+      "responsePreview": " 今天是个美好的下午，你有没有想学习 algoDS 的新算法呢？😊"
+    },
+    {
+      "model": "mistralai/mixtral-8x7b-instruct-v0.1",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 568,
+      "totalMs": 1735,
+      "responseChars": 34,
+      "responsePreview": " 今天是个美好的下午，你有没有想学习 algoDS 的新算法呢？😊"
+    },
+    {
+      "model": "moonshotai/kimi-k2-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 9064,
+      "totalMs": 10743,
+      "responseChars": 22,
+      "responsePreview": "今天适合把窗户打开，让阳光和好心情一起进来。"
+    },
+    {
+      "model": "moonshotai/kimi-k2-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1089,
+      "totalMs": 2358,
+      "responseChars": 21,
+      "responsePreview": "今天适合出门走走，晒晒太阳，顺便喝杯热茶。"
+    },
+    {
+      "model": "moonshotai/kimi-k2-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 2609,
+      "totalMs": 3094,
+      "responseChars": 21,
+      "responsePreview": "今天适合出门走走，晒晒太阳，顺便喝杯热茶。"
+    },
+    {
+      "model": "moonshotai/kimi-k2-thinking",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60008,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "moonshotai/kimi-k2-thinking attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2-thinking",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60006,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "moonshotai/kimi-k2-thinking attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2-thinking",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60002,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "moonshotai/kimi-k2-thinking attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60006,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "moonshotai/kimi-k2.6 attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60004,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "moonshotai/kimi-k2.6 attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60006,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "moonshotai/kimi-k2.6 attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "nv-mistralai/mistral-nemo-12b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 1743,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nv-mistralai/mistral-nemo-12b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 308,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nv-mistralai/mistral-nemo-12b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 371,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/ai-synthetic-video-detector",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 3528,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "500 status code (no body)",
+        "status": 500
+      }
+    },
+    {
+      "model": "nvidia/ai-synthetic-video-detector",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 5229,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "500 status code (no body)",
+        "status": 500
+      }
+    },
+    {
+      "model": "nvidia/ai-synthetic-video-detector",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 2689,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "500 status code (no body)",
+        "status": 500
+      }
+    },
+    {
+      "model": "nvidia/cosmos-reason2-8b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 627,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/cosmos-reason2-8b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 349,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/cosmos-reason2-8b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 312,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/embed-qa-4",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 156,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/embed-qa-4",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 115,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/embed-qa-4",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 453,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/gliner-pii",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 593,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/gliner-pii",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 594,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/gliner-pii",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 685,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/ising-calibration-1-35b-a3b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 23324,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/ising-calibration-1-35b-a3b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60005,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "nvidia/ising-calibration-1-35b-a3b attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "nvidia/ising-calibration-1-35b-a3b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60006,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "nvidia/ising-calibration-1-35b-a3b attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 1262,
+      "totalMs": 1263,
+      "responseChars": 24,
+      "responsePreview": "{\"User Safety\": \"safe\"} "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1094,
+      "totalMs": 1095,
+      "responseChars": 24,
+      "responsePreview": "{\"User Safety\": \"safe\"} "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 476,
+      "totalMs": 781,
+      "responseChars": 24,
+      "responsePreview": "{\"User Safety\": \"safe\"} "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-topic-control",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 367,
+      "totalMs": 401,
+      "responseChars": 9,
+      "responsePreview": "on-topic "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-topic-control",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 474,
+      "totalMs": 474,
+      "responseChars": 9,
+      "responsePreview": "on-topic "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-topic-control",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 360,
+      "totalMs": 401,
+      "responseChars": 9,
+      "responsePreview": "on-topic "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-51b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 202,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-51b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 199,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-51b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 144,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 166,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 131,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 128,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 377,
+      "totalMs": 1239,
+      "responseChars": 105,
+      "responsePreview": "今天可以根据你的心情和兴趣选择不同的活动！如果你感到疲倦，可能可以休息一下；如果你想学习，可能可以学习一段时间；如果你想娱乐，可能可以看电影、玩游戏或者读书；如果你想运动，可能可以去跑步、骑自行车或做体力训等。"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 36603,
+      "totalMs": 40631,
+      "responseChars": 21,
+      "responsePreview": "今天可以做一些轻松、有趣或是你想做的事情！"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 420,
+      "totalMs": 1283,
+      "responseChars": 105,
+      "responsePreview": "今天可以根据你的心情和兴趣选择不同的活动！如果你感到疲倦，可能可以休息一下；如果你想学习，可能可以学习一段时间；如果你想娱乐，可能可以看电影、玩游戏或者读书；如果你想运动，可能可以去跑步、骑自行车或做体力训等。"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 459,
+      "totalMs": 1182,
+      "responseChars": 36,
+      "responsePreview": "今天适合做一些轻松的事情，比如看书、听音乐、做个小活动，或者和朋友聊天。"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 383,
+      "totalMs": 1036,
+      "responseChars": 36,
+      "responsePreview": "今天适合做一些轻松的事情，比如看书、听音乐、做个小活动，或者和朋友聊天。"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 457,
+      "totalMs": 1076,
+      "responseChars": 36,
+      "responsePreview": "今天适合做一些轻松的事情，比如看书、听音乐、做个小活动，或者和朋友聊天。"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 495,
+      "totalMs": 828,
+      "responseChars": 24,
+      "responsePreview": "{\"User Safety\": \"safe\"} "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 639,
+      "totalMs": 915,
+      "responseChars": 24,
+      "responsePreview": "{\"User Safety\": \"safe\"} "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 466,
+      "totalMs": 804,
+      "responseChars": 24,
+      "responsePreview": "{\"User Safety\": \"safe\"} "
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 259,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 424,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 182,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 101,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 102,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 101,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-300m-embed-v1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 109,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-300m-embed-v1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 103,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-300m-embed-v1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 131,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 101,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 377,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 448,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 158,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 176,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 163,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 399,
+      "totalMs": 1030,
+      "responseChars": 21,
+      "responsePreview": "今天适合做任何能让你感到快乐和充实的事情！"
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 3055,
+      "totalMs": 4449,
+      "responseChars": 52,
+      "responsePreview": "今天适合做任何能带给你快乐和成就感的事情！（如学习、运动、创作、休闲等，根据个人兴趣和天气情况自行选择）"
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 3613,
+      "totalMs": 5135,
+      "responseChars": 39,
+      "responsePreview": "今天适合做任何能带给你快乐和成就感的事情！（如学习、运动、创作、与亲友相聚等）"
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 7861,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 5735,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 39456,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-1b-v2",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 99,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-1b-v2",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 107,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-1b-v2",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 104,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 98,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 403,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 165,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama3-chatqa-1.5-70b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 149,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama3-chatqa-1.5-70b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 141,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/llama3-chatqa-1.5-70b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 142,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 137,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 128,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 431,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemoretriever-parse",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 649,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "nvidia/nemoretriever-parse",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 638,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "nvidia/nemoretriever-parse",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 364,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-content-safety",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 321,
+      "totalMs": 367,
+      "responseChars": 17,
+      "responsePreview": "User Safety: safe"
+    },
+    {
+      "model": "nvidia/nemotron-3-content-safety",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1089,
+      "totalMs": 1090,
+      "responseChars": 17,
+      "responsePreview": "User Safety: safe"
+    },
+    {
+      "model": "nvidia/nemotron-3-content-safety",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 392,
+      "totalMs": 428,
+      "responseChars": 17,
+      "responsePreview": "User Safety: safe"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-30b-a3b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 898,
+      "totalMs": 899,
+      "responseChars": 10,
+      "responsePreview": "今天适合去公园散步。"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-30b-a3b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1113,
+      "totalMs": 1114,
+      "responseChars": 10,
+      "responsePreview": "今天适合去公园散步。"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-30b-a3b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1183,
+      "totalMs": 1213,
+      "responseChars": 10,
+      "responsePreview": "今天适合去公园散步。"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 610,
+      "totalMs": 644,
+      "responseChars": 16,
+      "responsePreview": "今天适合出去散步或在家阅读书籍。"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 3996,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1020,
+      "totalMs": 1087,
+      "responseChars": 18,
+      "responsePreview": "今天适合出去散步或在家阅读一本好书。"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 1289,
+      "totalMs": 1367,
+      "responseChars": 16,
+      "responsePreview": "今天适合出去散步或在家阅读书籍。"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 728,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 6504,
+      "totalMs": 7340,
+      "responseChars": 16,
+      "responsePreview": "今天适合出去散步或在家阅读书籍。"
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 2106,
+      "totalMs": 2107,
+      "responseChars": 17,
+      "responsePreview": "今天天气晴朗，适合户外散步或骑行。"
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 3851,
+      "totalMs": 3852,
+      "responseChars": 17,
+      "responsePreview": "今天天气晴朗，适合户外散步或骑行。"
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 8322,
+      "totalMs": 8323,
+      "responseChars": 18,
+      "responsePreview": "今天适合去公园散步，享受阳光和新鲜空"
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 10351,
+      "totalMs": 10351,
+      "responseChars": 17,
+      "responsePreview": "今天适合去公园散步，享受阳光和新鲜"
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 7273,
+      "totalMs": 7274,
+      "responseChars": 17,
+      "responsePreview": "今天适合去公园散步，享受阳光和新鲜"
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 5688,
+      "totalMs": 5689,
+      "responseChars": 17,
+      "responsePreview": "今天适合去公园散步，享受阳光和新鲜"
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 147,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 143,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 156,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-reward",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 134,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-reward",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 222,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-reward",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 262,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-content-safety-reasoning-4b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 1187,
+      "totalMs": 1188,
+      "responseChars": 28,
+      "responsePreview": "今天适合在家放松一下，看看书或者做些自己喜欢的事情吧！\n"
+    },
+    {
+      "model": "nvidia/nemotron-content-safety-reasoning-4b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 376,
+      "totalMs": 590,
+      "responseChars": 28,
+      "responsePreview": "今天适合在家放松一下，看看书或者做些自己喜欢的事情吧！\n"
+    },
+    {
+      "model": "nvidia/nemotron-content-safety-reasoning-4b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 356,
+      "totalMs": 883,
+      "responseChars": 28,
+      "responsePreview": "今天适合在家放松一下，看看书或者做些自己喜欢的事情吧！\n"
+    },
+    {
+      "model": "nvidia/nemotron-mini-4b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 408,
+      "totalMs": 922,
+      "responseChars": 57,
+      "responsePreview": "\"今天适合静静享受美好时光，如阅读一本好书、品尝美味佳肴、或静心逛一处风景如画的地方，放松身心，迎接明天的美好。\""
+    },
+    {
+      "model": "nvidia/nemotron-mini-4b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 431,
+      "totalMs": 896,
+      "responseChars": 57,
+      "responsePreview": "\"今天适合静静享受美好时光，如阅读一本好书、品尝美味佳肴、或静心逛一处风景如画的地方，放松身心，迎接明天的美好。\""
+    },
+    {
+      "model": "nvidia/nemotron-mini-4b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 579,
+      "totalMs": 1263,
+      "responseChars": 57,
+      "responsePreview": "\"今天适合静静享受美好时光，如阅读一本好书、品尝美味佳肴、或静心逛一处风景如画的地方，放松身心，迎接明天的美好。\""
+    },
+    {
+      "model": "nvidia/nemotron-nano-12b-v2-vl",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 341,
+      "totalMs": 341,
+      "responseChars": 13,
+      "responsePreview": "今天适合做你想做的事情。\n"
+    },
+    {
+      "model": "nvidia/nemotron-nano-12b-v2-vl",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 218,
+      "totalMs": 380,
+      "responseChars": 13,
+      "responsePreview": "今天适合做你想做的事情。\n"
+    },
+    {
+      "model": "nvidia/nemotron-nano-12b-v2-vl",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 281,
+      "totalMs": 401,
+      "responseChars": 13,
+      "responsePreview": "今天适合做你想做的事情。\n"
+    },
+    {
+      "model": "nvidia/nemotron-nano-3-30b-a3b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 117,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 The model `nvidia/nemotron-nano-3-30b-a3b` does not exist.",
+        "code": 404,
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-nano-3-30b-a3b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 132,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 The model `nvidia/nemotron-nano-3-30b-a3b` does not exist.",
+        "code": 404,
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-nano-3-30b-a3b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 119,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 The model `nvidia/nemotron-nano-3-30b-a3b` does not exist.",
+        "code": 404,
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nemotron-parse",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 390,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "nvidia/nemotron-parse",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 424,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "nvidia/nemotron-parse",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 340,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "400 status code (no body)",
+        "status": 400
+      }
+    },
+    {
+      "model": "nvidia/neva-22b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 133,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/neva-22b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 371,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/neva-22b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 197,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embed-v1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 101,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embed-v1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 99,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embed-v1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 98,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedcode-7b-v1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 98,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedcode-7b-v1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 98,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedcode-7b-v1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 108,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedqa-e5-v5",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 108,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedqa-e5-v5",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 99,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedqa-e5-v5",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 384,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedqa-mistral-7b-v2",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 101,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedqa-mistral-7b-v2",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 671,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nv-embedqa-mistral-7b-v2",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 100,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nvclip",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 100,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nvclip",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 100,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nvclip",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 123,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/nvidia-nemotron-nano-9b-v2",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 3112,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/nvidia-nemotron-nano-9b-v2",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 3234,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/nvidia-nemotron-nano-9b-v2",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 2399,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 216,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 144,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 424,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct-v1.1",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 379,
+      "totalMs": 600,
+      "responseChars": 64,
+      "responsePreview": "In one sentence, please answer: What is appropriate to do today?"
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct-v1.1",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 443,
+      "totalMs": 605,
+      "responseChars": 64,
+      "responsePreview": "In one sentence, please answer: What is appropriate to do today?"
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct-v1.1",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 366,
+      "totalMs": 584,
+      "responseChars": 64,
+      "responsePreview": "In one sentence, please answer: What is appropriate to do today?"
+    },
+    {
+      "model": "nvidia/vila",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 116,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "410 status code (no body)",
+        "status": 410
+      }
+    },
+    {
+      "model": "nvidia/vila",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 141,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "nvidia/vila",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 137,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 899,
+      "totalMs": 909,
+      "responseChars": 21,
+      "responsePreview": "今天适合出去散步，呼吸新鲜空气，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 629,
+      "totalMs": 734,
+      "responseChars": 21,
+      "responsePreview": "今天适合出去散步，呼吸新鲜空气，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 1078,
+      "totalMs": 1079,
+      "responseChars": 11,
+      "responsePreview": "今天适合出去散步，呼吸"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 573,
+      "totalMs": 776,
+      "responseChars": 19,
+      "responsePreview": "今天适合出门散步，享受阳光和新鲜空气。"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1540,
+      "totalMs": 1621,
+      "responseChars": 19,
+      "responsePreview": "今天适合出去散步，享受阳光和新鲜空气。"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 855,
+      "totalMs": 970,
+      "responseChars": 21,
+      "responsePreview": "今天适合出去散步，呼吸新鲜空气，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 533,
+      "totalMs": 665,
+      "responseChars": 24,
+      "responsePreview": "今天适合在阳光明媚的午后，去公园散步，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 1145,
+      "totalMs": 1145,
+      "responseChars": 24,
+      "responsePreview": "今天适合在阳光明媚的午后，去公园散步，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 1247,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 815,
+      "totalMs": 815,
+      "responseChars": 22,
+      "responsePreview": "今天适合去公园散步，呼吸新鲜空气，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 861,
+      "totalMs": 1087,
+      "responseChars": 27,
+      "responsePreview": "今天适合在阳光明媚的午后，去附近的公园散步，放松身心。"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 833,
+      "totalMs": 1337,
+      "responseChars": 29,
+      "responsePreview": "今天适合在阳光明媚的午后，去附近的公园散步，呼吸新鲜空气。"
+    },
+    {
+      "model": "qwen/qwen2.5-coder-32b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 160,
+      "totalMs": 280,
+      "responseChars": 10,
+      "responsePreview": "今天适合去公园散步。"
+    },
+    {
+      "model": "qwen/qwen2.5-coder-32b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 165,
+      "totalMs": 222,
+      "responseChars": 10,
+      "responsePreview": "今天适合去公园散步。"
+    },
+    {
+      "model": "qwen/qwen2.5-coder-32b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 145,
+      "totalMs": 238,
+      "responseChars": 10,
+      "responsePreview": "今天适合去公园散步。"
+    },
+    {
+      "model": "qwen/qwen3-coder-480b-a35b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 4601,
+      "totalMs": 7193,
+      "responseChars": 30,
+      "responsePreview": "今天适合做些轻松愉快的事情，比如散步、听音乐或者和朋友聊天。"
+    },
+    {
+      "model": "qwen/qwen3-coder-480b-a35b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 5116,
+      "totalMs": 9172,
+      "responseChars": 29,
+      "responsePreview": "今天适合做些轻松愉快的事情，比如散步、听音乐或和朋友聊天。"
+    },
+    {
+      "model": "qwen/qwen3-coder-480b-a35b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 31383,
+      "totalMs": 34733,
+      "responseChars": 27,
+      "responsePreview": "今天适合做些轻松的事情，比如散步、读书或者和朋友聊天。"
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 217,
+      "totalMs": 636,
+      "responseChars": 30,
+      "responsePreview": "今天适合根据天气和心情选择放松、运动或学习等有益身心的活动。"
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 169,
+      "totalMs": 412,
+      "responseChars": 29,
+      "responsePreview": "今天适合根据天气和心情，选择户外活动、学习提升或好好休息。"
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 234,
+      "totalMs": 703,
+      "responseChars": 29,
+      "responsePreview": "今天适合根据天气和心情，选择户外活动、学习提升或好好休息。"
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-thinking",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 1053,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-thinking",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 970,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-thinking",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": null,
+      "totalMs": 936,
+      "responseChars": 0,
+      "responsePreview": ""
+    },
+    {
+      "model": "qwen/qwen3.5-122b-a10b",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 2596,
+      "totalMs": 2878,
+      "responseChars": 27,
+      "responsePreview": "今天适合放下焦虑，专注做一件让你感到平静或快乐的小事。"
+    },
+    {
+      "model": "qwen/qwen3.5-122b-a10b",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 2313,
+      "totalMs": 4687,
+      "responseChars": 27,
+      "responsePreview": "今天适合放下焦虑，专注做一件让你感到充实或快乐的小事。"
+    },
+    {
+      "model": "qwen/qwen3.5-122b-a10b",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 5947,
+      "totalMs": 9336,
+      "responseChars": 27,
+      "responsePreview": "今天适合放下焦虑，专注做一件让你感到充实或快乐的小事。"
+    },
+    {
+      "model": "qwen/qwen3.5-397b-a17b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60007,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "qwen/qwen3.5-397b-a17b attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "qwen/qwen3.5-397b-a17b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60002,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "qwen/qwen3.5-397b-a17b attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "qwen/qwen3.5-397b-a17b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60007,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "qwen/qwen3.5-397b-a17b attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "sarvamai/sarvam-m",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 585,
+      "totalMs": 4454,
+      "responseChars": 186,
+      "responsePreview": "好的，用户问的是“今天适合做什么？”，需要用一句中文回答。首先，我得考虑用户的需求，可能他们想知道 today 的天气 situation，或者是根据天气来建议 activity。比如，如果天气好，可以建议户外活动；如果下雨，可能建议在家的活动。\n\n接下来，我需要确认用户的位置，但问题中没有提供地理位置信息，所以可能无法获取当前天气。这时候，可能需要给一个通用的回答回答"
+    },
+    {
+      "model": "sarvamai/sarvam-m",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 417,
+      "totalMs": 4385,
+      "responseChars": 186,
+      "responsePreview": "好的，用户问的是“今天适合做什么？”，需要用一句中文回答。首先，我得考虑用户的需求，可能他们想知道 today 的天气 situation，或者是根据天气来建议 activity。比如，如果天气好，可以建议户外活动；如果下雨，可能建议在家的活动。\n\n接下来，我需要确认用户的位置，但问题中没有提供地理位置信息，所以可能无法获取当前天气。这时候，可能需要给一个通用的回答回答"
+    },
+    {
+      "model": "sarvamai/sarvam-m",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 597,
+      "totalMs": 4403,
+      "responseChars": 186,
+      "responsePreview": "好的，用户问的是“今天适合做什么？”，需要用一句中文回答。首先，我得考虑用户的需求，可能他们想知道 today 的天气 situation，或者是根据天气来建议 activity。比如，如果天气好，可以建议户外活动；如果下雨，可能建议在家的活动。\n\n接下来，我需要确认用户的位置，但问题中没有提供地理位置信息，所以可能无法获取当前天气。这时候，可能需要给一个通用的回答回答"
+    },
+    {
+      "model": "snowflake/arctic-embed-l",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 246,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "snowflake/arctic-embed-l",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 98,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "snowflake/arctic-embed-l",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 100,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 404 page not found\n",
+        "status": 404
+      }
+    },
+    {
+      "model": "stepfun-ai/step-3.5-flash",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 13936,
+      "totalMs": 14037,
+      "responseChars": 17,
+      "responsePreview": "出门散散步，感受一下今天的天气吧。"
+    },
+    {
+      "model": "stepfun-ai/step-3.5-flash",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 11961,
+      "totalMs": 11962,
+      "responseChars": 12,
+      "responsePreview": "出门散步，感受春日气息。"
+    },
+    {
+      "model": "stepfun-ai/step-3.5-flash",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 2691,
+      "totalMs": 2946,
+      "responseChars": 20,
+      "responsePreview": "今天天气正好，不妨出门散散步，放松心情。"
+    },
+    {
+      "model": "stockmark/stockmark-2-100b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 577,
+      "totalMs": 1315,
+      "responseChars": 17,
+      "responsePreview": "今天适合外出散步或者在家里看电影。"
+    },
+    {
+      "model": "stockmark/stockmark-2-100b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 474,
+      "totalMs": 1454,
+      "responseChars": 21,
+      "responsePreview": "今天适合外出散步或者去公园看看,天气很好。"
+    },
+    {
+      "model": "stockmark/stockmark-2-100b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 402,
+      "totalMs": 1127,
+      "responseChars": 17,
+      "responsePreview": "今天适合外出散步或者在家里看看书。"
+    },
+    {
+      "model": "upstage/solar-10.7b-instruct",
+      "attempt": 1,
+      "ok": true,
+      "firstTokenMs": 451,
+      "totalMs": 3359,
+      "responseChars": 107,
+      "responsePreview": "今天天气好和时间足够的情况下,你可以出门逛街、参加户外活动、有机会运动或与朋友聚会等。如果天气不好或需要 indoor活动,你可以学习新知识、阅读书籍、做手工作或家务等。最重要的是,做自己喜欢的事,享受生活的美好。"
+    },
+    {
+      "model": "upstage/solar-10.7b-instruct",
+      "attempt": 2,
+      "ok": true,
+      "firstTokenMs": 583,
+      "totalMs": 3433,
+      "responseChars": 107,
+      "responsePreview": "今天天气好和时间足够的情况下,你可以出门逛街、参加户外活动、有机会运动或与朋友聚会等。如果天气不好或需要 indoor活动,你可以学习新知识、阅读书籍、做手工作或家务等。最重要的是,做自己喜欢的事,享受生活的美好。"
+    },
+    {
+      "model": "upstage/solar-10.7b-instruct",
+      "attempt": 3,
+      "ok": true,
+      "firstTokenMs": 372,
+      "totalMs": 3258,
+      "responseChars": 107,
+      "responsePreview": "今天天气好和时间足够的情况下,你可以出门逛街、参加户外活动、有机会运动或与朋友聚会等。如果天气不好或需要 indoor活动,你可以学习新知识、阅读书籍、做手工作或家务等。最重要的是,做自己喜欢的事,享受生活的美好。"
+    },
+    {
+      "model": "writer/palmyra-creative-122b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 146,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-creative-122b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 141,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-creative-122b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 122,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-fin-70b-32k",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 129,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-fin-70b-32k",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 216,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-fin-70b-32k",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 198,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-med-70b",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 128,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-med-70b",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 144,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-med-70b",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 131,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-med-70b-32k",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 128,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-med-70b-32k",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 217,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "writer/palmyra-med-70b-32k",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 186,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "z-ai/glm-5.1",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60008,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm-5.1 attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm-5.1",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60009,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm-5.1 attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm-5.1",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60007,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm-5.1 attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm4.7",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60007,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm4.7 attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm4.7",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60003,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm4.7 attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm4.7",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60007,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm4.7 attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm5",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60001,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm5 attempt 1 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm5",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60008,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm5 attempt 2 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "z-ai/glm5",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 60005,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "TimeoutError",
+        "message": "z-ai/glm5 attempt 3 timed out after 60000ms."
+      }
+    },
+    {
+      "model": "zyphra/zamba2-7b-instruct",
+      "attempt": 1,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 1735,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "zyphra/zamba2-7b-instruct",
+      "attempt": 2,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 283,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    },
+    {
+      "model": "zyphra/zamba2-7b-instruct",
+      "attempt": 3,
+      "ok": false,
+      "firstTokenMs": null,
+      "totalMs": 299,
+      "responseChars": 0,
+      "responsePreview": "",
+      "error": {
+        "name": "Error",
+        "message": "404 status code (no body)",
+        "status": 404
+      }
+    }
+  ],
+  "summary": [
+    {
+      "model": "01-ai/yi-large",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "abacusai/dracarys-llama-3.1-70b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1734,
+      "avgTotalMs": 2365,
+      "minTotalMs": 1213,
+      "maxTotalMs": 4260
+    },
+    {
+      "model": "adept/fuyu-8b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "ai21labs/jamba-1.5-large-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "aisingapore/sea-lion-7b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "baai/bge-m3",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "bigcode/starcoder2-15b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "bytedance/seed-oss-36b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 14947,
+      "minTotalMs": 11698,
+      "maxTotalMs": 17142
+    },
+    {
+      "model": "databricks/dbrx-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "deepseek-ai/deepseek-coder-6.7b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "attempts": 6,
+      "successes": 4,
+      "failures": 2,
+      "avgFirstTokenMs": 1544,
+      "avgTotalMs": 2980,
+      "minTotalMs": 929,
+      "maxTotalMs": 4677
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "attempts": 6,
+      "successes": 5,
+      "failures": 1,
+      "avgFirstTokenMs": 5585,
+      "avgTotalMs": 10047,
+      "minTotalMs": 1181,
+      "maxTotalMs": 26780
+    },
+    {
+      "model": "google/codegemma-1.1-7b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "google/codegemma-7b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "google/deplot",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "google/gemma-2-2b-it",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "google/gemma-2b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1787,
+      "avgTotalMs": 2260,
+      "minTotalMs": 1901,
+      "maxTotalMs": 2522
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 2392,
+      "avgTotalMs": 3996,
+      "minTotalMs": 3594,
+      "maxTotalMs": 4781
+    },
+    {
+      "model": "google/gemma-3n-e2b-it",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 691,
+      "avgTotalMs": 2142,
+      "minTotalMs": 1680,
+      "maxTotalMs": 2659
+    },
+    {
+      "model": "google/gemma-3n-e4b-it",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 651,
+      "avgTotalMs": 2463,
+      "minTotalMs": 2170,
+      "maxTotalMs": 2921
+    },
+    {
+      "model": "google/gemma-4-31b-it",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 20505,
+      "avgTotalMs": 21977,
+      "minTotalMs": 785,
+      "maxTotalMs": 33209
+    },
+    {
+      "model": "google/recurrentgemma-2b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "ibm/granite-3.0-3b-a800m-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "ibm/granite-3.0-8b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "ibm/granite-34b-code-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "ibm/granite-8b-code-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "meta/codellama-70b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "meta/llama-3.1-70b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1400,
+      "avgTotalMs": 2946,
+      "minTotalMs": 1963,
+      "maxTotalMs": 4131
+    },
+    {
+      "model": "meta/llama-3.1-8b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 491,
+      "avgTotalMs": 2641,
+      "minTotalMs": 1938,
+      "maxTotalMs": 3714
+    },
+    {
+      "model": "meta/llama-3.2-11b-vision-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 584,
+      "avgTotalMs": 1647,
+      "minTotalMs": 1318,
+      "maxTotalMs": 1947
+    },
+    {
+      "model": "meta/llama-3.2-1b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 721,
+      "avgTotalMs": 1706,
+      "minTotalMs": 1574,
+      "maxTotalMs": 1777
+    },
+    {
+      "model": "meta/llama-3.2-3b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "meta/llama-3.2-90b-vision-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 474,
+      "avgTotalMs": 2231,
+      "minTotalMs": 1499,
+      "maxTotalMs": 3320
+    },
+    {
+      "model": "meta/llama-3.3-70b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1268,
+      "avgTotalMs": 5849,
+      "minTotalMs": 529,
+      "maxTotalMs": 16042
+    },
+    {
+      "model": "meta/llama-4-maverick-17b-128e-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 483,
+      "avgTotalMs": 649,
+      "minTotalMs": 472,
+      "maxTotalMs": 985
+    },
+    {
+      "model": "meta/llama-guard-4-12b",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 743,
+      "avgTotalMs": 751,
+      "minTotalMs": 392,
+      "maxTotalMs": 1429
+    },
+    {
+      "model": "meta/llama2-70b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "microsoft/kosmos-2",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "microsoft/phi-3-vision-128k-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "microsoft/phi-3.5-moe-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "microsoft/phi-4-mini-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "microsoft/phi-4-multimodal-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "minimaxai/minimax-m2.5",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 15263,
+      "avgTotalMs": 16373,
+      "minTotalMs": 1210,
+      "maxTotalMs": 46324
+    },
+    {
+      "model": "minimaxai/minimax-m2.7",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 6895,
+      "minTotalMs": 5926,
+      "maxTotalMs": 7831
+    },
+    {
+      "model": "mistralai/codestral-22b-instruct-v0.1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "mistralai/devstral-2-123b-instruct-2512",
+      "attempts": 3,
+      "successes": 1,
+      "failures": 2,
+      "avgFirstTokenMs": 4186,
+      "avgTotalMs": 4700,
+      "minTotalMs": 4700,
+      "maxTotalMs": 4700
+    },
+    {
+      "model": "mistralai/magistral-small-2506",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 7031,
+      "minTotalMs": 6920,
+      "maxTotalMs": 7111
+    },
+    {
+      "model": "mistralai/ministral-14b-instruct-2512",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 392,
+      "avgTotalMs": 759,
+      "minTotalMs": 745,
+      "maxTotalMs": 775
+    },
+    {
+      "model": "mistralai/mistral-7b-instruct-v0.3",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "mistralai/mistral-large",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "mistralai/mistral-large-2-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 2401,
+      "avgTotalMs": 5036,
+      "minTotalMs": 1176,
+      "maxTotalMs": 8114
+    },
+    {
+      "model": "mistralai/mistral-medium-3-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1156,
+      "avgTotalMs": 1387,
+      "minTotalMs": 446,
+      "maxTotalMs": 3234
+    },
+    {
+      "model": "mistralai/mistral-nemotron",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 183,
+      "avgTotalMs": 448,
+      "minTotalMs": 417,
+      "maxTotalMs": 481
+    },
+    {
+      "model": "mistralai/mistral-small-4-119b-2603",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 795,
+      "avgTotalMs": 1276,
+      "minTotalMs": 730,
+      "maxTotalMs": 1655
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-instruct-v0.1",
+      "attempts": 3,
+      "successes": 1,
+      "failures": 2,
+      "avgFirstTokenMs": 45757,
+      "avgTotalMs": 46802,
+      "minTotalMs": 46802,
+      "maxTotalMs": 46802
+    },
+    {
+      "model": "mistralai/mixtral-8x22b-v0.1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "mistralai/mixtral-8x7b-instruct-v0.1",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1582,
+      "avgTotalMs": 2437,
+      "minTotalMs": 1258,
+      "maxTotalMs": 4318
+    },
+    {
+      "model": "moonshotai/kimi-k2-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 4254,
+      "avgTotalMs": 5398,
+      "minTotalMs": 2358,
+      "maxTotalMs": 10743
+    },
+    {
+      "model": "moonshotai/kimi-k2-thinking",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nv-mistralai/mistral-nemo-12b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/ai-synthetic-video-detector",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/cosmos-reason2-8b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/embed-qa-4",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/gliner-pii",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 624,
+      "minTotalMs": 593,
+      "maxTotalMs": 685
+    },
+    {
+      "model": "nvidia/ising-calibration-1-35b-a3b",
+      "attempts": 3,
+      "successes": 1,
+      "failures": 2,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 23324,
+      "minTotalMs": 23324,
+      "maxTotalMs": 23324
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 944,
+      "avgTotalMs": 1046,
+      "minTotalMs": 781,
+      "maxTotalMs": 1263
+    },
+    {
+      "model": "nvidia/llama-3.1-nemoguard-8b-topic-control",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 400,
+      "avgTotalMs": 425,
+      "minTotalMs": 401,
+      "maxTotalMs": 474
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-51b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 12467,
+      "avgTotalMs": 14384,
+      "minTotalMs": 1239,
+      "maxTotalMs": 40631
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 433,
+      "avgTotalMs": 1098,
+      "minTotalMs": 1036,
+      "maxTotalMs": 1182
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 533,
+      "avgTotalMs": 849,
+      "minTotalMs": 804,
+      "maxTotalMs": 915
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.2-nemoretriever-300m-embed-v1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.2-nv-embedqa-1b-v2",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 2356,
+      "avgTotalMs": 3538,
+      "minTotalMs": 1030,
+      "maxTotalMs": 5135
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 17684,
+      "minTotalMs": 5735,
+      "maxTotalMs": 39456
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-1b-v2",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/llama3-chatqa-1.5-70b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nemoretriever-parse",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nemotron-3-content-safety",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 601,
+      "avgTotalMs": 628,
+      "minTotalMs": 367,
+      "maxTotalMs": 1090
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-30b-a3b",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 1065,
+      "avgTotalMs": 1075,
+      "minTotalMs": 899,
+      "maxTotalMs": 1213
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "attempts": 6,
+      "successes": 6,
+      "failures": 0,
+      "avgFirstTokenMs": 2356,
+      "avgTotalMs": 2527,
+      "minTotalMs": 644,
+      "maxTotalMs": 7340
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "attempts": 6,
+      "successes": 6,
+      "failures": 0,
+      "avgFirstTokenMs": 6265,
+      "avgTotalMs": 6266,
+      "minTotalMs": 2107,
+      "maxTotalMs": 10351
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nemotron-4-340b-reward",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nemotron-content-safety-reasoning-4b",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 640,
+      "avgTotalMs": 887,
+      "minTotalMs": 590,
+      "maxTotalMs": 1188
+    },
+    {
+      "model": "nvidia/nemotron-mini-4b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 473,
+      "avgTotalMs": 1027,
+      "minTotalMs": 896,
+      "maxTotalMs": 1263
+    },
+    {
+      "model": "nvidia/nemotron-nano-12b-v2-vl",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 280,
+      "avgTotalMs": 374,
+      "minTotalMs": 341,
+      "maxTotalMs": 401
+    },
+    {
+      "model": "nvidia/nemotron-nano-3-30b-a3b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nemotron-parse",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/neva-22b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nv-embed-v1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nv-embedcode-7b-v1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nv-embedqa-e5-v5",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nv-embedqa-mistral-7b-v2",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nvclip",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/nvidia-nemotron-nano-9b-v2",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 2915,
+      "minTotalMs": 2399,
+      "maxTotalMs": 3234
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "nvidia/riva-translate-4b-instruct-v1.1",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 396,
+      "avgTotalMs": 596,
+      "minTotalMs": 584,
+      "maxTotalMs": 605
+    },
+    {
+      "model": "nvidia/vila",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 6,
+      "successes": 6,
+      "failures": 0,
+      "avgFirstTokenMs": 929,
+      "avgTotalMs": 1015,
+      "minTotalMs": 734,
+      "maxTotalMs": 1621
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "attempts": 6,
+      "successes": 6,
+      "failures": 0,
+      "avgFirstTokenMs": 837,
+      "avgTotalMs": 1049,
+      "minTotalMs": 665,
+      "maxTotalMs": 1337
+    },
+    {
+      "model": "qwen/qwen2.5-coder-32b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 157,
+      "avgTotalMs": 247,
+      "minTotalMs": 222,
+      "maxTotalMs": 280
+    },
+    {
+      "model": "qwen/qwen3-coder-480b-a35b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 13700,
+      "avgTotalMs": 17033,
+      "minTotalMs": 7193,
+      "maxTotalMs": 34733
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 207,
+      "avgTotalMs": 584,
+      "minTotalMs": 412,
+      "maxTotalMs": 703
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-thinking",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": 986,
+      "minTotalMs": 936,
+      "maxTotalMs": 1053
+    },
+    {
+      "model": "qwen/qwen3.5-122b-a10b",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 3619,
+      "avgTotalMs": 5634,
+      "minTotalMs": 2878,
+      "maxTotalMs": 9336
+    },
+    {
+      "model": "qwen/qwen3.5-397b-a17b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "sarvamai/sarvam-m",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 533,
+      "avgTotalMs": 4414,
+      "minTotalMs": 4385,
+      "maxTotalMs": 4454
+    },
+    {
+      "model": "snowflake/arctic-embed-l",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "stepfun-ai/step-3.5-flash",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 9529,
+      "avgTotalMs": 9648,
+      "minTotalMs": 2946,
+      "maxTotalMs": 14037
+    },
+    {
+      "model": "stockmark/stockmark-2-100b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 484,
+      "avgTotalMs": 1299,
+      "minTotalMs": 1127,
+      "maxTotalMs": 1454
+    },
+    {
+      "model": "upstage/solar-10.7b-instruct",
+      "attempts": 3,
+      "successes": 3,
+      "failures": 0,
+      "avgFirstTokenMs": 469,
+      "avgTotalMs": 3350,
+      "minTotalMs": 3258,
+      "maxTotalMs": 3433
+    },
+    {
+      "model": "writer/palmyra-creative-122b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "writer/palmyra-fin-70b-32k",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "writer/palmyra-med-70b",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "writer/palmyra-med-70b-32k",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "z-ai/glm-5.1",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "z-ai/glm4.7",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "z-ai/glm5",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    },
+    {
+      "model": "zyphra/zamba2-7b-instruct",
+      "attempts": 3,
+      "successes": 0,
+      "failures": 3,
+      "avgFirstTokenMs": null,
+      "avgTotalMs": null,
+      "minTotalMs": null,
+      "maxTotalMs": null
+    }
+  ]
+}

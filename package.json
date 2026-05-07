@@ -5,12 +5,14 @@
   "main": "nvidia-chat.js",
   "scripts": {
     "benchmark:nvidia": "node nvidia-model-benchmark.js",
+    "benchmark:nvidia:proxy": "node nvidia-model-benchmark-proxy.js",
     "test": "node --test test/*.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "undici": "^7.16.0",
     "openai": "^6.29.0"
   }
 }

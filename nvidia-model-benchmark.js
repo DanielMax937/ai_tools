@@ -7,6 +7,48 @@ const { performance } = require('node:perf_hooks');
 const DEFAULT_BASE_URL = 'https://integrate.api.nvidia.com/v1';
 const DEFAULT_PROMPT = '请用一句中文回答：今天适合做什么？';
 
+function stripOptionalQuotes(value) {
+  const trimmed = value.trim();
+  const first = trimmed[0];
+  const last = trimmed[trimmed.length - 1];
+
+  if ((first === '"' && last === '"') || (first === "'" && last === "'")) {
+    return trimmed.slice(1, -1);
+  }
+
+  return trimmed;
+}
+
+function loadEnvFile(envPath = path.resolve('.env'), env = process.env) {
+  if (!fs.existsSync(envPath)) {
+    return false;
+  }
+
+  const content = fs.readFileSync(envPath, 'utf8');
+  for (const rawLine of content.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('#')) {
+      continue;
+    }
+
+    const normalizedLine = line.startsWith('export ') ? line.slice('export '.length).trim() : line;
+    const separatorIndex = normalizedLine.indexOf('=');
+    if (separatorIndex === -1) {
+      continue;
+    }
+
+    const key = normalizedLine.slice(0, separatorIndex).trim();
+    if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key) || Object.prototype.hasOwnProperty.call(env, key)) {
+      continue;
+    }
+
+    const value = normalizedLine.slice(separatorIndex + 1);
+    env[key] = stripOptionalQuotes(value);
+  }
+
+  return true;
+}
+
 class TimeoutError extends Error {
   constructor(message) {
     super(message);
@@ -306,7 +348,8 @@ async function runBenchmark(client, options) {
   };
 }
 
-async function main() {
+async function main(extraClientOptions = {}) {
+  loadEnvFile();
   const options = parseArgs();
 
   if (options.help) {
@@ -322,6 +365,7 @@ async function main() {
   const client = new OpenAI({
     apiKey: options.apiKey,
     baseURL: options.baseURL,
+    ...extraClientOptions,
   });
 
   const report = await runBenchmark(client, options);
@@ -345,6 +389,8 @@ module.exports = {
   TimeoutError,
   benchmarkAttempt,
   buildSummary,
+  loadEnvFile,
+  main,
   parseArgs,
   runBenchmark,
   withTimeout,
