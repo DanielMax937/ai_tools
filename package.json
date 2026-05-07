@@ -4,7 +4,8 @@
   "description": "## 环境与依赖安装（使用 uv）",
   "main": "nvidia-chat.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "benchmark:nvidia": "node nvidia-model-benchmark.js",
+    "test": "node --test test/*.test.js"
   },
   "keywords": [],
   "author": "",
