@@ -1,0 +1,21 @@
+Hi everyone, this is Mandarin Market Oracle.
+
+Prediction markets price public information well, but still have a language gap. Many China macro, A-share, semiconductor, geopolitical, and Asia-session crypto signals appear first in Mandarin. English markets may see them late, or map them to the wrong contract.
+
+Mandarin Market Oracle closes that gap by turning live Mandarin signals into explainable, verifiable prediction-market intelligence.
+
+On the dashboard, the agent reads real Mandarin sources: public Eastmoney finance news and A-share market data. The left column shows a live signal tape with freshness, source quality, and flow velocity.
+
+I select a signal. In the center, the system shows the original Mandarin headline and an English brief. This is more than translation: the agent classifies the signal, scores credibility and freshness, and estimates likely market impact.
+
+Next, it searches live Polymarket markets in read-only mode. It requires a real priced market with a live YES price, then ranks contracts by relevance so it does not pick a random China-related market. Here, the signal maps to a China GDP prediction market.
+
+Now we see market-implied probability, agent fair probability, and edge. The recommendation is not forced. If the edge is too small, the agent says WAIT. The trace shows credibility, velocity, freshness, penalties, liquidity, edge threshold, conviction, and capped Kelly sizing.
+
+When I click Ask LLM Analyst, the LLM only explains the deterministic result. It does not decide the trade or change the probability.
+
+Finally, Arc. The system creates a compact reasoning receipt with evidence hash, recommendation hash, market slug, signal ID, direction, probabilities, and risk size. Write Arc Proof submits it to a deployed Arc testnet registry contract.
+
+It does not place Polymarket orders, custody funds, or move real USDC. It uses read-only market data, testnet risk units, and Arc testnet proofs.
+
+Mandarin Market Oracle turns live Mandarin market signals into explainable, risk-aware, Arc-verifiable prediction-market intelligence.
