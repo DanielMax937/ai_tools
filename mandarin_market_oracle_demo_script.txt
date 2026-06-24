@@ -1,0 +1,25 @@
+Hi everyone, this is Mandarin Market Oracle.
+
+Prediction markets are great at pricing public information, but they still have a language problem. A lot of China macro, A-share, semiconductor, geopolitical, and Asia-session crypto signals appear first in Mandarin sources. English prediction markets may see those signals late, or fail to map them to the right market at all.
+
+Mandarin Market Oracle closes that gap. It turns live Mandarin market signals into explainable and verifiable prediction-market intelligence.
+
+Here on the dashboard, the agent is reading real Mandarin sources. Today it is using public Eastmoney finance news and A-share market data. On the left, we have the live signal tape. Each item is a Mandarin source signal with freshness, source quality, and flow velocity.
+
+I will select this signal. In the center, the system shows the original Mandarin headline and an English brief for judges. This is not just translation. The agent classifies the signal, scores source credibility, checks how fresh it is, and identifies what kind of market impact it may have.
+
+Next, the agent searches live Polymarket markets in read-only mode. It requires a real priced market with a live YES price. It also ranks markets by relevance, so it does not just pick a random contract that happens to contain the word China. In this example, the signal maps to a China GDP prediction market.
+
+Here we can see the market-implied probability, the agent's fair probability, and the edge. The recommendation is not forced. If the edge is not large enough, the agent says WAIT. That is intentional. This is a research agent, not a hype machine.
+
+The decision trace makes the reasoning inspectable. It shows credibility, velocity, freshness, risk penalties, liquidity adjustment, edge threshold, conviction, and capped Kelly sizing. So the user can see why the agent made the decision.
+
+Now I will click Ask LLM Analyst. The LLM is used only as an explanation layer. It does not decide the trade or rewrite the probability. It receives the deterministic output and explains the Mandarin signal, the causal path, and the probability rationale in English.
+
+Finally, the Arc part. On the right, the system prepares a proof payload for Arc testnet. It includes the evidence hash, recommendation hash, market slug, signal ID, direction, market probability, agent probability, and risk size. When I click Write Arc Proof, the system submits this reasoning receipt to a deployed Arc testnet registry contract.
+
+This is the key idea: the agent reasons off-chain using live data, but commits a compact, verifiable proof of its recommendation on Arc.
+
+Mandarin Market Oracle does not place real Polymarket orders, custody funds, or move real USDC. It is compliance-safe: read-only market data, testnet risk units, and Arc testnet proofs.
+
+In one sentence: Mandarin Market Oracle turns live Mandarin market signals into explainable, risk-aware, and Arc-verifiable prediction-market intelligence.
