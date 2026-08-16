@@ -129,6 +129,8 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
 .venv
 env/
 venv/
@@ -174,3 +176,8 @@ cython_debug/
 node_modules/
 nvidia-chat.js
 .DS_Store
+.gradio/
+*.pem
+*.key
+*.p12
+*.pfx
